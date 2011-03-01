@@ -1,2 +1,24 @@
 body {background-image:url('twit10.jpg');} 
-#pokker {width:800px; height:500px; margin-left: auto; margin-right: auto; background-image:url('table copy.png');}
+#pokker {
+		width:800px;
+		height:500px;
+		background-image:url('table copy.png');}
+
+c.player{}
+
+#player{
+	left:0px;
+	top: 0px;	
+	width:50px;
+	height:80px;
+	background-image:url('ass.png');
+}
+
+#tabel {
+	left:0px;
+	width:200px;
+	height:200px;
+	margin-left: auto; 
+	margin-right: auto;
+	border-style:solid;
+	}
