@@ -29,3 +29,17 @@ c.player{}
 #vahe {
 	width:100px;
 	}
+
+#vahe2 {
+	width:600px;
+	}
+	
+#kaardid{
+	margin-top: 10px;
+	}
+	
+#chat {
+	width:600px;
+	height:200px;
+	border-style:solid;
+	}
