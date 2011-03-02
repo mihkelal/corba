@@ -1,24 +1,31 @@
 body {background-image:url('twit10.jpg');} 
 #pokker {
 		width:800px;
-		height:500px;
+		height:440px;
+		margin-top: 0px;
+		border: solid 10px #443425;
 		background-image:url('table copy.png');}
 
 c.player{}
 
 #player{
 	left:0px;
-	top: 0px;	
+	margin-top: 60px;	
 	width:50px;
-	height:80px;
+	height:75px;
 	background-image:url('ass.png');
 }
 
 #tabel {
 	left:0px;
 	width:200px;
-	height:200px;
+	height:600px;
 	margin-left: auto; 
 	margin-right: auto;
+	margin-top: 0px;
 	border-style:solid;
+	}
+	
+#vahe {
+	width:100px;
 	}
