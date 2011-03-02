@@ -38,8 +38,21 @@ c.player{}
 	margin-top: 10px;
 	}
 	
-#chat {
-	width:600px;
-	height:200px;
-	border-style:solid;
+#chatbox{
+    background-color: #494B49;
+    border: 1px solid black;
+    float: left;
+    height: 230px;
+    
+    padding: 5px;
+    width: 600px;
+	}
+	
+#chatarea{
+    background: none repeat scroll 0 0 #A9ABA8;
+    border: thin solid black;
+    height: 350px;
+    overflow: auto;
+    padding: 2px;
+    width: 234px;
 	}
