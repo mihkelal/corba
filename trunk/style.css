@@ -3,19 +3,56 @@ body {background-image:url('twit10.jpg');}
 		width:800px;
 		height:440px;
 		margin-top: 0px;
-		border: solid 10px #443425;
-		background-image:url('table copy.png');}
+		background-image:url('table copy.png');
+		}
 
-c.player{}
-
-#player{
+.player{
 	left:0px;
 	margin-top: 60px;	
 	width:50px;
 	height:75px;
 	background-image:url('ass.png');
+	}
+.player2{
+	left:0px;
+	margin-top: 60px;	
+	width:34px;
+	height:50px;
+	background-image:url('ass.png');
 }
 
+.cardbacksmall{
+	left:0px;
+	margin-top: 60px;	
+	width:34px;
+	height:50px;
+	background-image:url('card back small.png');
+	}
+.ykskaart{
+	left:0px;
+	margin-top: 60px;	
+	width:34px;
+	height:50px;
+	background-image:url('r6.png');
+	}
+
+.cardback{
+	left:0px;
+	margin-top: 60px;	
+	width:50px;
+	height:75px;
+	background-image:url('card back.png');
+	}
+
+.suurenda{	
+	margin-left: -60px;
+	width:240px;
+	height:80px;
+	position:relative;
+	background-image:url('1small.png');
+	display: block;
+	
+}
 #tabel {
 	left:0px;
 	width:200px;
@@ -23,36 +60,39 @@ c.player{}
 	margin-left: auto; 
 	margin-right: auto;
 	margin-top: 0px;
-	border-style:solid;
 	}
 	
-#vahe {
-	width:100px;
+#vahe {width:100px;}
+#vahe2 {width:80px;}
+
+.pot {
+	margin-top: 60px;
+	margin-left: 50px;
+	width:120px;
+	height:70px;
+	background-color: green;
+	-moz-border-radius: 50px;
+	border: 1px solid black;
 	}
 
-#vahe2 {
-	width:600px;
-	}
 	
-#kaardid{
-	margin-top: 10px;
-	}
+#kaardid{margin-top: 10px;}
 	
 #chatbox{
     background-color: #494B49;
     border: 1px solid black;
     float: left;
     height: 230px;
-    
+    margin-top: 70px;
     padding: 5px;
     width: 600px;
+    -moz-border-radius: 50px;
 	}
 	
-#chatarea{
-    background: none repeat scroll 0 0 #A9ABA8;
-    border: thin solid black;
-    height: 350px;
-    overflow: auto;
-    padding: 2px;
-    width: 234px;
+.chatarea{
+    margin-left: 20px;
 	}
+#button{
+	margin-top: 100px;
+	}
+.alumineriba{margin-left: 20px;}
