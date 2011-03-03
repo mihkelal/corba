@@ -4,68 +4,62 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<!--<img src="table copy.png"/>--> 
-
-
-<table id="tabel">
-	
-	<tr>
-		
+<table class="tabel">	
+	<tr>		
 		<td>
-			<div id="pokker">
-			<TABLE id = "kaardid" CELLPADDING="1" ALIGN="center"> <!-- ülemine kaardirida -->
+			<div class="pokkerilaud">
+			<TABLE class = "kaardid" CELLPADDING="1" ALIGN="center"> <!-- ülemine kaardirida -->
 				<tr>
-					
 					<td>
-						<div class="cardback" id="player1">
+						<div class="cardback" id="player11">
 						<img src="2.png" width="120" height="80" VSPACE=40 />
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player2">
+						<div class="cardback" id="player12">
 						</div>
-						<div id="vahe"></div>
+						<div class="vahe"></div>
 					</td>
 					<td>
-						<div class="cardback" id="player3">
+						<div class="cardback" id="player21">
 						<img src="2.png" width="120" height="80" VSPACE=40 />
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player4">
+						<div class="cardback" id="player22">
 						</div>
-						<div id="vahe"></div>
+						<div class="vahe"></div>
 					</td>
 					<td>
-						<div class="cardback" id="player5">
+						<div class="cardback" id="player31">
 						<img src="2.png" width="120" height="80" VSPACE=40 />
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player6"></div>						
-						<div id="vahe"></div>
+						<div class="cardback" id="player32"></div>						
+						<div class="vahe"></div>
 					</td>
 					<td >					
-						<div class="cardback" id="player7">						
+						<div class="cardback" id="player41">						
 						<img src="2.png" width="120" height="80" VSPACE=40 >						
 						</div>						
 					</td>
 					<td>
-						<div class="cardback" id="player8"></div>						
+						<div class="cardback" id="player42"></div>						
 					</td>					
 				</tr>
 			</table>			
 			<TABLE CELLPADDING="1" ALIGN="center">	<!-- keskmine kaardirida -->
 					<td>
-						<div class="cardback" id="player">
+						<div class="cardback" id="player51">
 						<img src="2.png" width="120" height="80" VSPACE=40>
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player"></div>
+						<div class="cardback" id="player52"></div>
 					</td>
 					
-					<td><div id="vahe2" ></div></td>
+					<td><div class="vahe2" ></div></td>
 					
 					<td><div class="cardbacksmall" ></div></td>
 					<td><div class="ykskaart" ></div></td>
@@ -76,47 +70,47 @@
 					
 					<td><div class="pot" ></div></td>
 
-					<td><div id="vahe2" ></div></td>
+					<td><div class="vahe2" ></div></td>
 					
 					<td>
-						<div class="cardback" id="player">
+						<div class="cardback" id="player61">
 						<img src="2.png" width="120" height="80" VSPACE=40>
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player"></div>
+						<div class="cardback" id="player62"></div>
 					</td>
 				
 			</table>
 			<TABLE CELLPADDING="1" ALIGN="center"> <!-- alumine kaardirida -->
 				<tr>
 					<td>
-						<div class="cardback" id="player">
+						<div class="cardback" id="player71">
 						<img src="2.png" width="120" height="80" VSPACE=40 >						
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player"></div>
-						<div id="vahe"></div>
+						<div class="cardback" id="player72"></div>
+						<div class="vahe"></div>
 					</td>
 					<td>
-						<div class="cardback" id="player">					
+						<div class="cardback" id="player81">					
 						<img src="2.png" width="120" height="80" VSPACE=40>
 						</div>
 					</td>
 					<td>
-						<div class="cardback" id="player"></div>
-						<div id="vahe"></div>
+						<div class="cardback" id="player82"></div>
+						<div class="vahe"></div>
 					</td>
 					<td>
-						<div class="cardback" id="player">
+						<div class="cardback" id="player91">
 						<img src="2.png" width="120" height="80" VSPACE=40>
 						</div>
 						
 					</td>
 					<td>
-						<div class="cardback" id="player"></div>
-						<div id="vahe"></div>
+						<div class="cardback" id="player92"></div>
+						<div class="vahe"></div>
 					</td>
 					<td>
 						<div class="cardback" id="cardback">
@@ -125,43 +119,47 @@
 						</div>
 					</td>
 					<td>
-						<div class="player" id="player"></div>						
+						<div class="player" id="player102"></div>						
 					</td>					
 				</tr>
 			</table>
 			</div>
-			<div class="chatbox" id="chatbox">
-				
-					<div class="chatarea">
-						test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>						
-					</div>
-					<input class="alumineriba" type="text" size="80" maxlength="90" name="PlayerMessage">
-					 <button type="button">send</button>
-				
-			</div>
-			<TABLE CELLPADDING="1" ALIGN="center">
-			<tr>					
+			<TABLE class="tabel2" ALIGN="center">
+			<tr>		
 				<td>
-					<div id="button"><button type="button">bet</button>
+					<input type="text" size="20" maxlength="10" name="Bet">
 				</td>
 				<td>
-					<input type="text" size="20" maxlength="10" name="Bet"></div>
-				</td>
+					<div><button type="button">bet</button></div>				
+				</td>			
 				<td>
 				<div><button type="button">check</button></div>
 				</td>
-			
-			<div><button type="button">call</button></div>
-			<div><button type="button">fold</button></div>
-			<div><button type="button">raise</button></div>
-								
+				<td>				
+				<div><button type="button">call</button></div>
+				</td>
+				<td>				
+				<div><button type="button">fold</button></div>
+				</td>
+				<td>
+				<div><button type="button">raise</button></div>
+				</td>
 				</tr>
 			</table>
-		</div>
+			<TABLE class="tabel3" ALIGN="center">
+			<tr>
+				<td>
+					<div class="chatbox">				
+					<div class="chatarea">
+					test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>					
+					<input class="alumineriba" type="text" size="80" maxlength="90" name="PlayerMessage">
+					<button type="button">send</button>				
+					</div>
+				</td>
+			</tr>
+			</table>			
 		</td>
-		
 	</tr>
 </table>
-
 </body>
 </html>
