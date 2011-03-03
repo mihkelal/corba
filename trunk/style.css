@@ -1,71 +1,71 @@
-body{background-image: url("twit10.jpg");}
+body{background-image: url("./images/background.jpg");}
 
 .pokertable{
-	background-image: url("tabel.png");
+	background-image: url("./images/board.png");
 }
 
 .player{
 	margin-top: 60px;
 	width: 50px;
 	height: 75px;
-	background-image: url("ass.png");
+	background-image: url("./images/ace.png");
 }
 
 #player21{
 	margin-top: 60px;
 	width: 50px;
 	height: 75px;
-	background-image: url("ass.png");
+	background-image: url("./images/ace.png");
 }
 
 .cardback{
 	margin-top: 60px;
 	width: 50px;
 	height: 75px;
-	background-image: url("card back.png");
+	background-image: url("./images/card back.png");
 }
 
 .cardbacksmall{
 	margin-top: 60px;
 	width: 34px;
 	height: 50px;
-	background-image: url("card back small.png");
+	background-image: url("./images/card back small.png");
 }
 
-.ykskaart{
+.acard{
 	margin-top: 60px;
 	width: 34px;
 	height: 50px;
-	background-image: url("r6.png");
+	background-image: url("./images/d6.png");
 }
 
-.suurenda{
+.zoom{
 	margin-left: -60px;
 	width: 240px;
 	height: 80px;
 	position: relative;
-	background-image: url("1small.png");
+	background-image: url("./images/zoomed.png");
 	display: block;
 }
 
-.tabel{
+.table{
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.tabel2{
+.table2{
 	margin-top: 50px;
 }
 
-.tabel3{
+.table3{
 	margin-top: -50px;
 }
 
-.vahe1{
+.whitespace1{
 	width: 100px;
 }
 
-.vahe2{
+.whitespace2{
 	width: 80px;
 }
 
@@ -79,7 +79,7 @@ body{background-image: url("twit10.jpg");}
 	border: 1px solid;
 }
 
-.kaardid{
+.cards{
 	margin-top: 10px;
 }
 
