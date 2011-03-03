@@ -1,88 +1,106 @@
-body {background-image:url('twit10.jpg');} 
-.pokkerilaud {
-	width:800px;
-	height:440px;
-	background-image:url('tabel.png');
-	}
-		
-.player{
-	margin-top: 60px;	
-	width:50px;
-	height:75px;
-	background-image:url('ass.png');
-	}
-	
-#player21{
-	margin-top: 60px;	
-	width:50px;
-	height:75px;
-	background-image:url('ass.png');
-	}
+body{background-image: url("twit10.jpg");}
 
-.cardbacksmall{
-	margin-top: 60px;	
-	width:34px;
-	height:50px;
-	background-image:url('card back small.png');
-	}
-	
-.ykskaart{
-	margin-top: 60px;	
-	width:34px;
-	height:50px;
-	background-image:url('r6.png');
-	}
+.pokertable{
+	background-image: url("tabel.png");
+}
+
+.player{
+	margin-top: 60px;
+	width: 50px;
+	height: 75px;
+	background-image: url("ass.png");
+}
+
+#player21{
+	margin-top: 60px;
+	width: 50px;
+	height: 75px;
+	background-image: url("ass.png");
+}
 
 .cardback{
-	margin-top: 60px;	
-	width:50px;
-	height:75px;
-	background-image:url('card back.png');
-	}
+	margin-top: 60px;
+	width: 50px;
+	height: 75px;
+	background-image: url("card back.png");
+}
 
-.suurenda{	
+.cardbacksmall{
+	margin-top: 60px;
+	width: 34px;
+	height: 50px;
+	background-image: url("card back small.png");
+}
+
+.ykskaart{
+	margin-top: 60px;
+	width: 34px;
+	height: 50px;
+	background-image: url("r6.png");
+}
+
+.suurenda{
 	margin-left: -60px;
-	width:240px;
-	height:80px;
-	position:relative;
-	background-image:url('1small.png');
-	display: block;	
-	}
-	
-.tabel {
-	width:200px;
-	height:600px;
-	margin-left: auto; 
+	width: 240px;
+	height: 80px;
+	position: relative;
+	background-image: url("1small.png");
+	display: block;
+}
+
+.tabel{
+	margin-left: auto;
 	margin-right: auto;
-	}
-	
-.tabel2 {margin-top: 50px;}
+}
 
-.tabel3 {margin-top: -50px;}
+.tabel2{
+	margin-top: 50px;
+}
 
-.vahe {width:100px;}
-.vahe2 {width:80px;}
+.tabel3{
+	margin-top: -50px;
+}
 
-.pot {
+.vahe1{
+	width: 100px;
+}
+
+.vahe2{
+	width: 80px;
+}
+
+.pot{
 	margin-top: 60px;
 	margin-left: 50px;
-	width:120px;
-	height:70px;
+	width: 120px;
+	height: 70px;
 	background-color: green;
 	-moz-border-radius: 50px;
-	border: 1px solid black;
-	}
+	border: 1px solid;
+}
 
-	
-.kaardid{margin-top: 10px;}
-	
+.kaardid{
+	margin-top: 10px;
+}
+
 .chatbox{
-    background-color: grey;
-    border: 1px solid black;
-    height: 230px;
-    margin-top: 70px;
-    width: 600px;
-    -moz-border-radius: 40px;
-	}
-	
-.chatarea{margin-left: 20px;}
+	background-color: #00FF99;
+	border: 1px solid;
+	height: 230px;
+	margin-top: 70px;
+	width: 600px;
+	-moz-border-radius: 40px;
+}
+
+.chatarea{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	height: 185px;
+	overflow: auto;
+}
+
+.textbox{
+	margin-left: 20px;
+	margin-top: 2px;
+}
