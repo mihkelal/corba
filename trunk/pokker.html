@@ -2,6 +2,12 @@
 	<head>
 		<title>Pokker</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript">
+			function show_alert()
+			{
+				alert("You bet xxx money");
+			}
+		</script>
 	</head>
 	<body>
 		<table class="table">
@@ -153,7 +159,7 @@
 								</td>
 								<td>
 									<div class="cardback" id="cardback">
-										<div onmouseover="className="zoom"" onmouseout="className="none"">
+										<div onmouseover="className='zoom'" onmouseout="className='none'">
 											<img src="./images/name and bet.png" width="120" height="80" vspace="40">
 										</div>
 									</div>
@@ -174,7 +180,7 @@
 							</td>
 							<td>
 								<div style="padding-right:8;">
-									<button type="button">Bet</button>
+									<input type="button" onclick="show_alert()" value="Bet" />
 								</div>
 							</td>
 							<td>
