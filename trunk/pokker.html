@@ -193,7 +193,7 @@
 										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
 										<div class="name">M&auml;ngija</div>
 										<div class="stack">$100</div>		
-										<div class="bet">$0</div>
+										<div class="bet" id="bet">$0</div>
 									</div>
 
 									</div>
@@ -229,12 +229,12 @@
 							</td>
 							<td>
 								<div style="padding-right:8;">
-									<button type="button">Fold</button>
+									<button type="button" onclick="fold()">Fold</button>
 								</div>
 							</td>
 							<td>
 								<div>
-									<button type="button">Raise</button>
+									<button type="button" onclick="addmoney()">Raise</button>
 								</div>
 							</td>
 						</tr>

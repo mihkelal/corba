@@ -12,6 +12,13 @@ body{background-image: url("./images/background.jpg");}
 	background-image: url("./images/ace.png");
 }
 
+.player91{
+	margin-top: 60px;
+	width: 50px;
+	height: 75px;
+	background-image: url("./images/ace.png");
+}
+
 #player21{
 	margin-top: 60px;
 	width: 50px;
