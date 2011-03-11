@@ -2,6 +2,7 @@ body{background-image: url("./images/background.jpg");}
 
 .pokertable{
 	background-image: url("./images/board.png");
+	background-repeat:no-repeat;
 }
 
 .player{
@@ -104,3 +105,22 @@ body{background-image: url("./images/background.jpg");}
 	margin-left: 20px;
 	margin-top: 2px;
 }
+
+.namebox{
+	height:40px;
+	}	
+
+.name	{
+	margin-left: 20px;
+}
+
+.stack {
+	margin-left: 20px;
+	margin-top: -5px;
+}
+
+.bet {
+	margin-top: 15px;
+	margin-left: 60px;
+	}
+	
