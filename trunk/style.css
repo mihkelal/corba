@@ -82,10 +82,11 @@ body{background-image: url("./images/background.jpg");}
 	margin-left: 50px;
 	width: 120px;
 	height: 70px;
-	background-color: green;
-	-moz-border-radius: 50px;
-	border: 1px solid;
 }
+
+#pot{
+	margin-top: -60px;
+	}
 
 .cards{
 	margin-top: 10px;

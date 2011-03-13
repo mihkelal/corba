@@ -122,6 +122,8 @@
 							</td>
 							<td>
 								<div class="pot">
+								<img src="./images/zoomed.png" width="120" height="80"/>
+									<div class="pot" id="pot">$0</div>
 								</div>
 							</td>
 							<td>
@@ -210,13 +212,14 @@
 					<table class="table2" align="center">
 						<tr>
 							<td>
-								<input type="text" size="20" maxlength="10" name="Bet">
+								<form>
+								<input type='text' id='sisend'/>
+								<input type='button' 
+									onclick="fn_bet(document.getElementById('sisend'))"
+									value='Bet' />
+								</form>
 							</td>
-							<td>
-								<div style="padding-right:8;">
-									<input type="button" onclick="show_alert()" value="Betb"/>
-								</div>
-							</td>
+
 							<td>
 								<div style="padding-right:8;">
 									<input type="button" onclick="show_prompt()" value="Check"/>
@@ -235,6 +238,11 @@
 							<td>
 								<div>
 									<button type="button" onclick="addmoney()">Raise</button>
+								</div>
+							</td>
+							<td>
+								<div>
+									<button type="button" onclick="to_pot()">Done !</button>
 								</div>
 							</td>
 						</tr>
