@@ -1,30 +1,17 @@
 body{background-image: url("./images/background.jpg");}
 
+#taust1{
+	margin-top: -10px;
+	margin-left: -10px;}
+#taust2{
+	margin-top: -60px;
+	margin-right: -10px;}
+
 .pokertable{
 	background-image: url("./images/board.png");
 	background-repeat:no-repeat;
 }
 
-.player{
-	margin-top: 60px;
-	width: 50px;
-	height: 75px;
-	background-image: url("./images/ace.png");
-}
-
-.player91{
-	margin-top: 60px;
-	width: 50px;
-	height: 75px;
-	background-image: url("./images/ace.png");
-}
-
-#player21{
-	margin-top: 60px;
-	width: 50px;
-	height: 75px;
-	background-image: url("./images/ace.png");
-}
 
 .cardback{
 	margin-top: 60px;
@@ -53,7 +40,6 @@ body{background-image: url("./images/background.jpg");}
 	height: 80px;
 	position: relative;
 	background-image: url("./images/zoomed.png");
-	display: block;
 }
 
 .table{
@@ -61,21 +47,12 @@ body{background-image: url("./images/background.jpg");}
 	margin-right: auto;
 }
 
-.table2{
-	margin-top: 50px;
-}
-
-.table3{
-	margin-top: -50px;
-}
-
-.whitespace1{
-	width: 100px;
-}
-
-.whitespace2{
-	width: 80px;
-}
+.table2{margin-top: 50px;}
+.table20{margin-top: -20px;}
+.table3{margin-top: -50px;}
+.table30{margin-top: -20px;}
+.whitespace1{width: 150px;}
+.whitespace2{width: 80px;}
 
 .pot{
 	margin-top: 60px;
@@ -85,12 +62,11 @@ body{background-image: url("./images/background.jpg");}
 }
 
 #pot{
-	margin-top: -60px;
+	margin-top: -55px;
+	margin-left: 10px;
+	color:339999;
+	font-size: 2em; 
 	}
-
-.cards{
-	margin-top: 10px;
-}
 
 .chatbox{
 	background-color: #00FF99;
@@ -115,11 +91,13 @@ body{background-image: url("./images/background.jpg");}
 }
 
 .namebox{
-	height:40px;
-	}	
-
+	margin-top: -75px;
+	
+	}
+	
 .name	{
 	margin-left: 20px;
+	margin-top: -118px;
 }
 
 .stack {
@@ -129,6 +107,29 @@ body{background-image: url("./images/background.jpg");}
 
 .bet {
 	margin-top: 15px;
-	margin-left: 60px;
+	margin-left: 30px;
 	}
-	
+
+#player11{margin-top: 60px;}
+#player12{margin-top: -75px;margin-left: 55px;}
+#player21{margin-top: 60px;}
+#player22{margin-top: -75px;margin-left: 55px;}
+#player31{margin-top: 60px;}
+#player32{margin-top: -75px;margin-left: 55px;}
+#player41{margin-top: 60px;}
+#player42{margin-top: -75px;margin-left: 55px;}
+#player51{margin-top: 60px;}
+#player52{margin-top: -75px;margin-left: 55px;}
+#player61{margin-top: 60px;}
+#player62{margin-top: -75px;margin-left: 55px;}
+#player71{margin-top: 60px;}
+#player72{margin-top: -75px;margin-left: 55px;}
+#player81{margin-top: 60px;}
+#player82{margin-top: -75px;margin-left: 55px;}
+#player91{margin-top: 60px;}
+#player92{margin-top: -75px;margin-left: 55px;}
+#player101{margin-top: 60px;}
+#player102{margin-top: -75px;margin-left: 55px;}
+
+#sisend{width: 50px;}
+#sisend2{width: 50px;}
