@@ -17,6 +17,8 @@ function fold()
 {
     //while mäng käib {
 	segamine();
+//	leia_diiler();
+	
 	
     //}
 
@@ -26,28 +28,57 @@ function fold()
 
 function segamine(){
 
-	var kaardipakk = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-	
-	kaardid [0] = new Array(4);
+//	var kaardipakk = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+//	
+//	kaardid [0] = new Array(4);
+//
+//	kaardid [0][0] = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+//
+//	kaardid [0][1] = [];
+//
+//	var i;
+//	var mangija = new Array();
+//	for (i=0;i<12;i++){
+//		mangija[i] = kaardipakk[i];
+//	
+//	}
+//	mis_kaart_kellele();
+//
+//	for (i=0;i<12;i++){
+//		document.write(mangija[i]);
+//		document.write("<br>");
+//	}
 
-	kaardid [0][0] = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+list1 = [1,2,"./images/ace.png",4,5,6,7];
+list2 = [];
 
-	kaardid [0][1] = [];
+//document.getElementById("player91").innerHTML=<img src=list1[2] width="50" height="75"/>;
+//midagi = new Array(kaart: "./images/ace.png", name: "fdd")
+//src=midagi.kaart [5]
 
-	var i;
-	var mangija = new Array();
-	for (i=0;i<12;i++){
-		mangija[i] = kaardipakk[i];
-	
+var ajutine;
+var x;
+//list2[10]=5;
+//document.write(list2.length);
+//document.write(list2[10]);
+for (ajutine=0;ajutine<7;ajutine++) {
+	x=Math.floor(Math.random()*7);
+	while (list1[x] == 0) {
+		x=Math.floor(Math.random()*7);
 	}
-	mis_kaart_kellele();
-
-	for (i=0;i<12;i++){
-		document.write(mangija[i]);
-		document.write("<br>");
-	}
-
-
+	list2[ajutine] = list1[x];
+	list1[x] = 0;
+	
+		
+}
+var ajutine2;
+for (ajutine2=0;ajutine2<7;ajutine2++) {
+	document.write(list2[ajutine2]);
+	document.write("<br>");
+}
+//for (ajutine2=0;ajutine2<7;ajutine2++) {
+//	<img src=list2[ajutine2] width="50" height="75"/>;
+//}
 }
 
 function mis_kaart_kellele(){
@@ -68,10 +99,6 @@ function mis_kaart_kellele(){
 }
 
 
-//document.getElementById("player11").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
-//document.getElementById("player22").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
-//document.getElementById("player31").innerHTML=<div><img src="./images/p1.png" width="50" height="75" /></div>;
-//document.getElementById("player42").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
 
 function fsisend(){
 	
@@ -107,6 +134,14 @@ function to_pot(){
 		document.getElementById("bet").innerHTML="$"+panus;
 
 	}
+	document.getElementById("player11").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
+	document.getElementById("player22").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
+	document.getElementById("player31").innerHTML=<div><img src="./images/p1.png" width="50" height="75" /></div>;
+	document.getElementById("player42").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
+
+	list11 = [1,2,"./images/ace.png",4,5,6,7];
+//
+	document.getElementById("player91").innerHTML=\""<img src=\""+list11[2]+" width="50" height="75"/>;
 
 }
 

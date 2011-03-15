@@ -2,6 +2,7 @@ body{background-image: url("./images/background.jpg");}
 
 .pokertable{
 	background-image: url("./images/board.png");
+	background-repeat:no-repeat;
 }
 
 .player{
@@ -9,6 +10,7 @@ body{background-image: url("./images/background.jpg");}
 	width: 50px;
 	height: 75px;
 	background-image: url("./images/ace.png");
+	background-repeat:no-repeat;
 }
 
 #player21{
@@ -16,6 +18,7 @@ body{background-image: url("./images/background.jpg");}
 	width: 50px;
 	height: 75px;
 	background-image: url("./images/ace.png");
+	background-repeat:no-repeat;
 }
 
 .cardback{
@@ -23,6 +26,7 @@ body{background-image: url("./images/background.jpg");}
 	width: 50px;
 	height: 75px;
 	background-image: url("./images/card back.png");
+	background-repeat:no-repeat;
 }
 
 .cardbacksmall{
@@ -30,6 +34,7 @@ body{background-image: url("./images/background.jpg");}
 	width: 34px;
 	height: 50px;
 	background-image: url("./images/card back small.png");
+	background-repeat:no-repeat;
 }
 
 .acard{
@@ -37,6 +42,7 @@ body{background-image: url("./images/background.jpg");}
 	width: 34px;
 	height: 50px;
 	background-image: url("./images/d6.png");
+	background-repeat:no-repeat;
 }
 
 .zoom{
@@ -45,7 +51,7 @@ body{background-image: url("./images/background.jpg");}
 	height: 80px;
 	position: relative;
 	background-image: url("./images/zoomed.png");
-	display: block;
+	
 }
 
 .table{
