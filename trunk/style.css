@@ -2,16 +2,18 @@ body{background-image: url("./images/background.jpg");}
 
 #taust1{
 	margin-top: -10px;
-	margin-left: -10px;}
+	margin-left: -10px;
+}
+
 #taust2{
 	margin-top: -60px;
-	margin-right: -10px;}
+	margin-right: -10px;
+}
 
 .pokertable{
 	background-image: url("./images/board.png");
 	background-repeat:no-repeat;
 }
-
 
 .cardback{
 	margin-top: 60px;

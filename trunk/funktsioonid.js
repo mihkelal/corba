@@ -8,20 +8,17 @@ var SB = 1;
 var BB = 2;
 
 function addmoney()
-{
-panus++
-document.getElementById("bet").innerHTML="$"+panus;
-}
+	{
+		panus++
+		document.getElementById("bet").innerHTML="$"+panus;
+	}
 
 function fold()
-{
-    //while mäng käib {
-	segamine();
-//	leia_diiler();
-	
-	
-    //}
-
+	{
+    	//while mäng käib {
+			segamine();
+			//	leia_diiler();
+		//}
 }
 
 
@@ -106,9 +103,6 @@ function fsisend(){
 }
 
 
-
-
-
 function fn_bet(elem){
 
 	
@@ -144,5 +138,3 @@ function to_pot(){
 	document.getElementById("player91").innerHTML=\""<img src=\""+list11[2]+" width="50" height="75"/>;
 
 }
-
-
