@@ -175,7 +175,6 @@ Botkaik9();
 
 function Botkaik1(){
 	var randomnumber=Math.floor(Math.random()*11);
-	alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot1_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -190,7 +189,6 @@ function Botkaik1(){
 
 function Botkaik2(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot2_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -205,7 +203,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik3(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot3_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -220,7 +217,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik4(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot4_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -235,7 +231,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik5(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot5_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -250,7 +245,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik6(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot6_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -265,7 +259,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik7(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot7_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
@@ -280,7 +273,6 @@ alert("Suvaline arv 1 - 11: " + randomnumber);
 
 function Botkaik8(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot8_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
