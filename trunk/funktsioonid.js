@@ -217,13 +217,15 @@ function leia_diiler() {
 function fn_command(elem){
 
 
-	var newText = document.createTextNode
-
-	(document.getElementById('t1').value);
+	var newText = document.createTextNode(elem.value);
 
 	var para = document.getElementById("example1");
-
+	
 	para.appendChild(newText);
+	para.appendChild(document.createElement('br'));
+	para.appendChild(document.createTextNode("command line# "));
+	
+	//document.getElementById("example1").innerHTML=para.value;
 }
 
 
