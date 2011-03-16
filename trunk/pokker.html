@@ -30,6 +30,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role1"></div>
 										<div class="whitespace1"></div>
 									</div>
 									
@@ -42,6 +43,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role2"></div>
 										<div class="whitespace1"></div>
 									</div>
 									
@@ -54,6 +56,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role3"></div>
 										<div class="whitespace1"></div>
 									</div>
 									
@@ -66,6 +69,10 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+
+										<div id = "role4"></div>
+
+
 									</div>
 									
 								</td>
@@ -84,6 +91,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role5"></div>
 										<div class="whitespace1"></div>
 									</div>
 							</td>
@@ -122,6 +130,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role6"></div>
 										<div class="whitespace1"></div>
 
 							</td>
@@ -140,6 +149,7 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role7"></div>
 										<div class="whitespace1"></div>
 									</div>
 									
@@ -152,33 +162,42 @@
 										<div class="name">Bot</div>
 										<div class="stack">$100</div>
 										<div class="bet">$0</div>
+										<div id = "role8"></div>
 										<div class="whitespace1"></div>
 									</div>
 									
 								</td>
 								<td>
 									<div class = "player7" id="player7">
-										<div onmouseover="className='zoom'" onmouseout="className='none'">
-											<div id="player71"><img src="./images/card back.png" width="50" height="75"/></div>
-											<div id="player72"><img src="./images/card back.png" width="50" height="75"/></div>
-											<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-											<div class="name">Bot</div>
-											<div class="stack">$100</div>
-											<div class="bet">$0</div>
-											<div class="whitespace1"></div>
-										</div>
+
+									<div onmouseover="className='zoom'" onmouseout="className='none'">
+										<div id="player71"><img src="./images/card back.png" width="50" height="75" /></div>
+										<div id="player72"><img src="./images/card back.png" width="50" height="75" /></div>
+										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+										<div class="name">Bot</div>
+										<div class="stack">$100</div>		
+										<div class="bet">$0</div>
+										<div id = "role9"></div>
+										<div class="whitespace1"></div>
+									</div>
+
+
 									</div>
 								</td>
 								<td>
 									<div class = "player10" id="player10">
-										<div onmouseover="className='zoom'" onmouseout="className='none'">
-											<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>
-											<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>
-											<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-											<div class="name">Mängija</div>
-											<div class="stack" id="stack">$100</div>
-											<div class="bet" id="bet">$0</div>
-										</div>
+
+									<div onmouseover="className='zoom'" onmouseout="className='none'">
+										<div id="player101"><img src="./images/card back.png" width="50" height="75" /></div>
+										<div id="player102"><img src="./images/card back.png" width="50" height="75" /></div>
+										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+										<div class="name">Mängija</div>
+										<div class="stack" id="stack">$100</div>		
+										<div class="bet" id="bet">$0</div>
+										<div id = "role10"></div>
+									</div>
+
+
 									</div>
 									
 								</td>
@@ -205,7 +224,7 @@
 							</td>
 							<td>
 								<div style="padding-right:8;">
-									<input type="button" onclick="show_prompt()" value="Check"/>
+									<button type="button" onclick="leia_diiler()">leia diiler</button>
 								</div>
 							</td>
 							<td>
