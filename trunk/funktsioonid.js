@@ -213,3 +213,17 @@ function leia_diiler() {
 	}
 
 }
+
+function fn_command(elem){
+
+
+	var newText = document.createTextNode
+
+	(document.getElementById('t1').value);
+
+	var para = document.getElementById("example1");
+
+	para.appendChild(newText);
+}
+
+
