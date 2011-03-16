@@ -135,3 +135,7 @@ body{background-image: url("./images/background.jpg");}
 
 #sisend{width: 50px;}
 #sisend2{width: 50px;}
+
+.roll{
+	margin-top: -65px;margin-left: 80px;
+	}
