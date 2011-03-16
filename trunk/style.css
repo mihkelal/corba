@@ -71,7 +71,7 @@ body{background-image: url("./images/background.jpg");}
 	}
 
 .chatbox{
-	background-color: #00FF99;
+	background-color: #000000;
 	border: 1px solid;
 	height: 230px;
 	margin-top: 70px;
@@ -80,6 +80,7 @@ body{background-image: url("./images/background.jpg");}
 }
 
 .chatarea{
+color:#00ff00;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 10px;
