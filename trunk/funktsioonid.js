@@ -3,6 +3,25 @@ var pot = 0;
 var suurim_panus = 0;
 var mangija_raha = 100;
 var diilercount = -1;
+var bot1_raha = 100;
+var bot2_raha = 100;
+var bot3_raha = 100;
+var bot4_raha = 100;
+var bot5_raha = 100;
+var bot6_raha = 100;
+var bot7_raha = 100;
+var bot8_raha = 100;
+var bot9_raha = 100;
+
+var bot1_panus = 100;
+var bot2_panus = 100;
+var bot3_panus = 100;
+var bot4_panus = 100;
+var bot5_panus = 100;
+var bot6_panus = 100;
+var bot7_panus = 100;
+var bot8_panus = 100;
+var bot9_panus = 100;
 
 var Dealer = o;
 var SB = 1;
@@ -134,10 +153,159 @@ function to_pot(){
 	document.getElementById("player31").innerHTML=<div><img src="./images/p1.png" width="50" height="75" /></div>;
 	document.getElementById("player42").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
 
-//	list11 = [1,2,"./images/ace.png",4,5,6,7];
+	Botkaigud();
+	
+	//	list11 = [1,2,"./images/ace.png",4,5,6,7];
 //
 //	document.getElementById("player91").innerHTML=\""<img src=\""+list11[2]+" width="50" height="75"/>;
 
+}
+
+function Botkaigud(){
+Botkaik1();
+Botkaik2();
+Botkaik3();
+Botkaik4();
+Botkaik5();
+Botkaik6();
+Botkaik7();
+Botkaik8();
+Botkaik9();
+}
+
+function Botkaik1(){
+	var randomnumber=Math.floor(Math.random()*11);
+	alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot1_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot1_raha=parseInt(bot1_raha)-parseInt(randomnumber);
+		document.getElementById("stack1").innerHTML="$"+bot1_raha;
+		document.getElementById("bet1").innerHTML="$"+randomnumber;
+	}
+	else {
+		alert("NO MONEY (起o)");
+	}
+}
+
+function Botkaik2(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot2_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot2_raha=parseInt(bot2_raha)-parseInt(randomnumber);
+		document.getElementById("stack2").innerHTML="$"+bot2_raha;
+		document.getElementById("bet2").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik3(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot3_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot3_raha=parseInt(bot3_raha)-parseInt(randomnumber);
+		document.getElementById("stack3").innerHTML="$"+bot3_raha;
+		document.getElementById("bet3").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik4(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot4_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot4_raha=parseInt(bot4_raha)-parseInt(randomnumber);
+		document.getElementById("stack4").innerHTML="$"+bot4_raha;
+		document.getElementById("bet4").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik5(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot5_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot5_raha=parseInt(bot5_raha)-parseInt(randomnumber);
+		document.getElementById("stack5").innerHTML="$"+bot5_raha;
+		document.getElementById("bet5").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik6(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot6_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot6_raha=parseInt(bot6_raha)-parseInt(randomnumber);
+		document.getElementById("stack6").innerHTML="$"+bot6_raha;
+		document.getElementById("bet6").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik7(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot7_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot7_raha=parseInt(bot7_raha)-parseInt(randomnumber);
+		document.getElementById("stack7").innerHTML="$"+bot7_raha;
+		document.getElementById("bet7").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik8(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot8_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot8_raha=parseInt(bot8_raha)-parseInt(randomnumber);
+		document.getElementById("stack8").innerHTML="$"+bot8_raha;
+		document.getElementById("bet8").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
+}
+
+function Botkaik9(){
+var randomnumber=Math.floor(Math.random()*11);
+alert("Suvaline arv 1 - 11: " + randomnumber);
+	if (randomnumber <= parseInt(bot9_raha)){
+		pot=parseInt(pot)+parseInt(randomnumber);
+		document.getElementById("pot").innerHTML="$"+pot;
+		bot9_raha=parseInt(bot9_raha)-parseInt(randomnumber);
+		document.getElementById("stack9").innerHTML="$"+bot9_raha;
+		document.getElementById("bet9").innerHTML="$"+randomnumber;
+	}
+		else {
+		alert("NO MONEY (起o)");
+}
 }
 
 
