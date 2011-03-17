@@ -180,7 +180,7 @@ function Botkaik1(){
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot1_raha=parseInt(bot1_raha)-parseInt(randomnumber);
 		document.getElementById("stack1").innerHTML="$"+bot1_raha;
-		document.getElementById("bet1").innerHTML="$"+randomnumber;
+		fn_command2("Player 1 betted $" + randomnumber);
 	}
 	else {
 		alert("NO MONEY (起o)");
@@ -194,7 +194,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot2_raha=parseInt(bot2_raha)-parseInt(randomnumber);
 		document.getElementById("stack2").innerHTML="$"+bot2_raha;
-		document.getElementById("bet2").innerHTML="$"+randomnumber;
+		fn_command2("Player 2 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -208,7 +208,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot3_raha=parseInt(bot3_raha)-parseInt(randomnumber);
 		document.getElementById("stack3").innerHTML="$"+bot3_raha;
-		document.getElementById("bet3").innerHTML="$"+randomnumber;
+		fn_command2("Player 3 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -222,7 +222,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot4_raha=parseInt(bot4_raha)-parseInt(randomnumber);
 		document.getElementById("stack4").innerHTML="$"+bot4_raha;
-		document.getElementById("bet4").innerHTML="$"+randomnumber;
+		fn_command2("Player 4 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -236,7 +236,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot5_raha=parseInt(bot5_raha)-parseInt(randomnumber);
 		document.getElementById("stack5").innerHTML="$"+bot5_raha;
-		document.getElementById("bet5").innerHTML="$"+randomnumber;
+		fn_command2("Player 5 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -250,7 +250,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot6_raha=parseInt(bot6_raha)-parseInt(randomnumber);
 		document.getElementById("stack6").innerHTML="$"+bot6_raha;
-		document.getElementById("bet6").innerHTML="$"+randomnumber;
+		fn_command2("Player 6 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -264,7 +264,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot7_raha=parseInt(bot7_raha)-parseInt(randomnumber);
 		document.getElementById("stack7").innerHTML="$"+bot7_raha;
-		document.getElementById("bet7").innerHTML="$"+randomnumber;
+		fn_command2("Player 7 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -278,7 +278,7 @@ var randomnumber=Math.floor(Math.random()*11);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot8_raha=parseInt(bot8_raha)-parseInt(randomnumber);
 		document.getElementById("stack8").innerHTML="$"+bot8_raha;
-		document.getElementById("bet8").innerHTML="$"+randomnumber;
+		fn_command2("Player 8 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -287,13 +287,12 @@ var randomnumber=Math.floor(Math.random()*11);
 
 function Botkaik9(){
 var randomnumber=Math.floor(Math.random()*11);
-alert("Suvaline arv 1 - 11: " + randomnumber);
 	if (randomnumber <= parseInt(bot9_raha)){
 		pot=parseInt(pot)+parseInt(randomnumber);
 		document.getElementById("pot").innerHTML="$"+pot;
 		bot9_raha=parseInt(bot9_raha)-parseInt(randomnumber);
 		document.getElementById("stack9").innerHTML="$"+bot9_raha;
-		document.getElementById("bet9").innerHTML="$"+randomnumber;
+		fn_command2("Player 9 betted $" + randomnumber);
 	}
 		else {
 		alert("NO MONEY (起o)");
@@ -389,3 +388,16 @@ function fn_command(elem){
 }
 
 
+function fn_command2(elem){
+
+
+	var newText = document.createTextNode(elem);
+
+	var para = document.getElementById("example1");
+	
+	para.appendChild(newText);
+	para.appendChild(document.createElement('br'));
+	para.appendChild(document.createTextNode("command line# "));
+	
+	//document.getElementById("example1").innerHTML=para.value;
+}
