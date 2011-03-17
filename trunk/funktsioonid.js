@@ -2,7 +2,7 @@ var panus = 0;
 var pot = 0;
 var suurim_panus = 0;
 var mangija_raha = 100;
-var diilercount = -1;
+var diilercount = 7;
 var bot1_raha = 100;
 var bot2_raha = 100;
 var bot3_raha = 100;
@@ -13,10 +13,13 @@ var bot7_raha = 100;
 var bot8_raha = 100;
 var bot9_raha = 100;
 var list3 = [];
+var ring = 1;
 
 var Dealer = o;
 var SB = 3;
 var BB = 6;
+
+var round = 0;
 
 function addmoney()
 	{
@@ -24,51 +27,15 @@ function addmoney()
 		document.getElementById("bet").innerHTML="$"+panus;
 	}
 
-function fold()
-	{
-    	//while mäng käib {
-			segamine();
-			//	leia_diiler();
-		//}
-}
-
-
-
 function segamine(){
-
-//	var kaardipakk = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-//	
-//	kaardid [0] = new Array(4);
-//
-//	kaardid [0][0] = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-//
-//	kaardid [0][1] = [];
-//
-//	var i;
-//	var mangija = new Array();
-//	for (i=0;i<12;i++){
-//		mangija[i] = kaardipakk[i];
-//	
-//	}
-//	mis_kaart_kellele();
-//
-//	for (i=0;i<12;i++){
-//		document.write(mangija[i]);
-//		document.write("<br>");
-//	}
 
 list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
 list2 = [];
 
-//document.getElementById("player91").innerHTML=<img src=list1[2] width="50" height="75"/>;
-//midagi = new Array(kaart: "./images/ace.png", name: "fdd")
-//src=midagi.kaart [5]
 var kaardidd=52;
 var ajutine;
 var x;
-//list2[10]=5;
-//document.write(list2.length);
-//document.write(list2[10]);
+
 for (ajutine=0;ajutine<kaardidd;ajutine++) {
 	x=Math.floor(Math.random()*kaardidd);
 	while (list1[x] == 0) {
@@ -80,23 +47,19 @@ for (ajutine=0;ajutine<kaardidd;ajutine++) {
 		
 }
 list3=list2;
-//var ajutine2;
-//for (ajutine2=0;ajutine2<kaardidd;ajutine2++) {
-//	document.write(list2[ajutine2]);
-//	document.write("<br>");
-//}
-mis_kaart_kellele();
-//for (ajutine2=0;ajutine2<7;ajutine2++) {
-//	<img src=list2[ajutine2] width="50" height="75"/>;
-//}
+
+var segamise_kuvamine = document.getElementById("example1");
+segamise_kuvamine.appendChild(document.createElement('br'));
+segamise_kuvamine.appendChild(document.createTextNode("kaardid on segatud"));
+segamise_kuvamine.appendChild(document.createElement('br'));
+para.appendChild(document.createTextNode("command line# "));
 }
 
 function mis_kaart_kellele(){
 	
 	var ajutine22;
 	var mangija = [];
-	var midagi = 22;
-	for (ajutine22 = 0; ajutine22 < 25; ajutine22++){
+	for (ajutine22 = 0; ajutine22 < 20; ajutine22++){
 		switch (ajutine22)
 		{
 		case 0:
@@ -159,47 +122,23 @@ function mis_kaart_kellele(){
 		case 19:
 			document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
 		  break;
-		case 20:
-			document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
-		  break;
-		case 21:
-			document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
-		  break;
-		case 22:
-			document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
-		  break;
-		case 23:
-			document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
-		  break;
-		case 24:
-			document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
-		  break;
+
 		default:
 			document.write("error");
 		}
 	}
-	
+	var kaartide_kuvamine = document.getElementById("example1");
+	kaartide_kuvamine.appendChild(document.createElement('br'));
+	kaartide_kuvamine.appendChild(document.createTextNode("kaardid on kuvatud"));
+	kaartide_kuvamine.appendChild(document.createElement('br'));
 }
 
 
-
-function fsisend(){
-	
+function fsisend(){	
 	document.write(document.text.Bet);
 }
 
-
-function fn_bet(elem){
-
-	
-	//document.write(elem.value);
-	
-	panus=parseInt(elem.value)+parseInt(panus);
-	document.getElementById("bet").innerHTML="$"+panus;
-}
-
 function fn_bet_how_much(elem){
-
 	panus=parseInt(elem.value);
 	document.getElementById("bet").innerHTML="$"+panus;
 }
@@ -212,14 +151,33 @@ function to_pot(){
 		document.getElementById("stack").innerHTML="$"+mangija_raha;
 		panus = 0;
 		document.getElementById("bet").innerHTML="$"+panus;
+		
+		Botkaigud();	
+		if (ring == 1){
+			document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
+		
+			document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
+		
+			document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
+			ring+=1;
+		}
+		else if (ring == 2){
+			document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[24] +".png' width='34' height='50'/></div>";
+			ring+=1;	
+		}
+		else if (ring == 3){
+			document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[2] +".png' width='34' height='50'/></div>";
+			ring+=1;
+		}
 
 	}
-
-	Botkaigud();
 	
-	//	list11 = [1,2,"./images/ace.png",4,5,6,7];
-//
-//	document.getElementById("player91").innerHTML=\""<img src=\""+list11[2]+" width="50" height="75"/>;
+	else {
+		var error = document.getElementById("example1");
+		error.appendChild(document.createElement('br'));
+		error.appendChild(document.createTextNode("pole piisavalt raha"));
+		error.appendChild(document.createElement('br'));
+	}
 
 }
 
@@ -240,13 +198,15 @@ function Botkaik1(){
 		
 	}
 	else{
+		if ( round == 1) {
+			if (parseInt(diilercount) == 9){
+				randomnumber=3;
+			}
+			if (parseInt(diilercount) == 8){
+				var randomnumber=6;
+			}
+		}
 		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 9){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 8){
-			var randomnumber=6;
-		}
 		if (randomnumber <= parseInt(bot1_raha)){
 			pot=parseInt(pot)+parseInt(randomnumber);
 			document.getElementById("pot").innerHTML="$"+pot;
@@ -265,9 +225,11 @@ function Botkaik2(){
 		
 	}
 	else{
-		var randomnumber=Math.floor(Math.random()*11);
+		var randomnumber=0;
 		if (parseInt(diilercount) == 0){
-			randomnumber=3;
+			alert("NO MONEY (°_o)2");
+			randomnumber=parseInt(SB);
+			
 		}
 		if (parseInt(diilercount) == 9){
 			var randomnumber=6;
@@ -462,10 +424,11 @@ if (parseInt(diilercount) == 8){
 }
 
 
-function leia_diiler() {
+function alusta_mangu() {
 	diilercount++;
 	if (parseInt(diilercount) == 10){
-		diilercount -=10;		
+		diilercount -=10;
+		round += 1;
 	}
 	switch (parseInt(diilercount))
 	{
@@ -532,34 +495,37 @@ function leia_diiler() {
 	default:
 		document.write("error");
 	}
+	
+	var alusta = document.getElementById("example1");
+	alusta.appendChild(document.createElement('br'));
+	alusta.appendChild(document.createTextNode("game on"));
+	alusta.appendChild(document.createElement('br'));
 
 }
 
 function fn_command(elem){
-
-
 	var newText = document.createTextNode(elem.value);
-
 	var para = document.getElementById("example1");
-	
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
 	para.appendChild(document.createTextNode("command line# "));
 	
-	//document.getElementById("example1").innerHTML=para.value;
 }
 
 
 function fn_command2(elem){
-
-
 	var newText = document.createTextNode(elem);
-
 	var para = document.getElementById("example1");
-	
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
 	para.appendChild(document.createTextNode("command line# "));
 	
-	//document.getElementById("example1").innerHTML=para.value;
+}
+
+function voitja(){
+	mangija_raha+=pot;
+	document.getElementById("stack").innerHTML="$"+mangija_raha;
+	
+	pot=0;
+	document.getElementById("pot").innerHTML="$"+pot;	
 }

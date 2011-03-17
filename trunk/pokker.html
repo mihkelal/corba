@@ -170,7 +170,7 @@
 								<td>
 									<div class = "player9" id="player9">
 
-									<div onmouseover="className='zoom'" onmouseout="className='none'">
+									
 										<div id="player91"><img src="./images/card back.png" width="50" height="75" /></div>
 										<div id="player92"><img src="./images/card back.png" width="50" height="75" /></div>
 										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
@@ -179,7 +179,7 @@
 										<div class="bet" id="bet9">$0</div>
 										<div id = "role9"></div>
 										<div class="whitespace1"></div>
-									</div>
+									
 
 
 									</div>
@@ -210,12 +210,7 @@
 					<!-- MIDDLE BUTTONS: BET ECT-->
 					<table class="table2" align="center">
 						<tr>
-							<td>
-								<form>
-									<input type='text' id='sisend'/>
-									<input type='button' onclick="fn_bet(document.getElementById('sisend'))" value='Add'/>
-								</form>
-							</td>
+
 							<td>
 								<form>
 									<input type='text' id='sisend2'/>
@@ -223,33 +218,35 @@
 								</form>
 							</td>
 							<td>
-								<div style="padding-right:8;">
-									<button type="button" onclick="leia_diiler()">leia diiler</button>
-								</div>
-							</td>
-							<td>
-								<div style="padding-right:8;">
-									<button type="button">Call</button>
-								</div>
-							</td>
-							<td>
-								<div style"trunk/script.js"="padding-right:8;">
-									<button type="button" onclick="fold()">Fold</button>
-								</div>
-							</td>
-							<td>
 								<div>
 									<button type="button" onclick="addmoney()">Raise</button>
 								</div>
 							</td>
 							<td>
-								<div>
-									<button type="button" onclick="to_pot()">Bet</button>
+								<div style="padding-right:8;">
+									<button type="button" onclick="alusta_mangu()">Alusta mängu</button>
 								</div>
 							</td>
 							<td>
 								<div>
 									<button type="button" onclick="segamine()">Sega</button>
+								</div>
+							</td>
+
+							<td>
+								<div>
+									<button type="button" onclick="to_pot()">Bet</button>
+								</div>
+							</td>
+							
+							<td>
+								<div>
+									<button type="button" onclick="mis_kaart_kellele()">Kuva teiste kaardid</button>
+								</div>
+							</td>
+							<td>
+								<div>
+									<button type="button" onclick="voitja()">määra võitja</button>
 								</div>
 							</td>
 						</tr>
