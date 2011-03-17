@@ -15,8 +15,8 @@ var bot9_raha = 100;
 var list3 = [];
 
 var Dealer = o;
-var SB = 1;
-var BB = 2;
+var SB = 3;
+var BB = 6;
 
 function addmoney()
 	{
@@ -236,129 +236,229 @@ Botkaik9();
 }
 
 function Botkaik1(){
-	var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot1_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot1_raha=parseInt(bot1_raha)-parseInt(randomnumber);
-		document.getElementById("stack1").innerHTML="$"+bot1_raha;
-		fn_command2("Player 1 betted $" + randomnumber);
+	if (parseInt(diilercount) == 0){
+		
 	}
-	else {
-		alert("NO MONEY (起o)");
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 9){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 8){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot1_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot1_raha=parseInt(bot1_raha)-parseInt(randomnumber);
+			document.getElementById("stack1").innerHTML="$"+bot1_raha;
+			fn_command2("Player 1 betted $" + randomnumber);
+		}
+		else {
+			alert("NO MONEY (起o)");
+		}
 	}
 }
 
 function Botkaik2(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot2_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot2_raha=parseInt(bot2_raha)-parseInt(randomnumber);
-		document.getElementById("stack2").innerHTML="$"+bot2_raha;
-		fn_command2("Player 2 betted $" + randomnumber);
+	if (parseInt(diilercount) == 1){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 0){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 9){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot2_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot2_raha=parseInt(bot2_raha)-parseInt(randomnumber);
+			document.getElementById("stack2").innerHTML="$"+bot2_raha;
+			fn_command2("Player 2 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik3(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot3_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot3_raha=parseInt(bot3_raha)-parseInt(randomnumber);
-		document.getElementById("stack3").innerHTML="$"+bot3_raha;
-		fn_command2("Player 3 betted $" + randomnumber);
+	if (parseInt(diilercount) == 2){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 1){
+			var randomnumber=3;
+		}
+		if (parseInt(diilercount) == 0){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot3_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot3_raha=parseInt(bot3_raha)-parseInt(randomnumber);
+			document.getElementById("stack3").innerHTML="$"+bot3_raha;
+			fn_command2("Player 3 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
+
 function Botkaik4(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot4_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot4_raha=parseInt(bot4_raha)-parseInt(randomnumber);
-		document.getElementById("stack4").innerHTML="$"+bot4_raha;
-		fn_command2("Player 4 betted $" + randomnumber);
+	if (parseInt(diilercount) == 3){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 2){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 1){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot4_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot4_raha=parseInt(bot4_raha)-parseInt(randomnumber);
+			document.getElementById("stack4").innerHTML="$"+bot4_raha;
+			fn_command2("Player 4 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik5(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot5_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot5_raha=parseInt(bot5_raha)-parseInt(randomnumber);
-		document.getElementById("stack5").innerHTML="$"+bot5_raha;
-		fn_command2("Player 5 betted $" + randomnumber);
+	if (parseInt(diilercount) == 4){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 3){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 2){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot5_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot5_raha=parseInt(bot5_raha)-parseInt(randomnumber);
+			document.getElementById("stack5").innerHTML="$"+bot5_raha;
+			fn_command2("Player 5 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik6(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot6_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot6_raha=parseInt(bot6_raha)-parseInt(randomnumber);
-		document.getElementById("stack6").innerHTML="$"+bot6_raha;
-		fn_command2("Player 6 betted $" + randomnumber);
+	if (parseInt(diilercount) == 5){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 4){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 3){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot6_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot6_raha=parseInt(bot6_raha)-parseInt(randomnumber);
+			document.getElementById("stack6").innerHTML="$"+bot6_raha;
+			fn_command2("Player 6 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik7(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot7_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot7_raha=parseInt(bot7_raha)-parseInt(randomnumber);
-		document.getElementById("stack7").innerHTML="$"+bot7_raha;
-		fn_command2("Player 7 betted $" + randomnumber);
+	if (parseInt(diilercount) == 6){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 5){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 4){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot7_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot7_raha=parseInt(bot7_raha)-parseInt(randomnumber);
+			document.getElementById("stack7").innerHTML="$"+bot7_raha;
+			fn_command2("Player 7 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik8(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot8_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot8_raha=parseInt(bot8_raha)-parseInt(randomnumber);
-		document.getElementById("stack8").innerHTML="$"+bot8_raha;
-		fn_command2("Player 8 betted $" + randomnumber);
+if (parseInt(diilercount) == 7){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 6){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 5){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot8_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot8_raha=parseInt(bot8_raha)-parseInt(randomnumber);
+			document.getElementById("stack8").innerHTML="$"+bot8_raha;
+			fn_command2("Player 8 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 function Botkaik9(){
-var randomnumber=Math.floor(Math.random()*11);
-	if (randomnumber <= parseInt(bot9_raha)){
-		pot=parseInt(pot)+parseInt(randomnumber);
-		document.getElementById("pot").innerHTML="$"+pot;
-		bot9_raha=parseInt(bot9_raha)-parseInt(randomnumber);
-		document.getElementById("stack9").innerHTML="$"+bot9_raha;
-		fn_command2("Player 9 betted $" + randomnumber);
+if (parseInt(diilercount) == 8){
+		
 	}
+	else{
+		var randomnumber=Math.floor(Math.random()*11);
+		if (parseInt(diilercount) == 7){
+			randomnumber=3;
+		}
+		if (parseInt(diilercount) == 6){
+			var randomnumber=6;
+		}
+		if (randomnumber <= parseInt(bot9_raha)){
+			pot=parseInt(pot)+parseInt(randomnumber);
+			document.getElementById("pot").innerHTML="$"+pot;
+			bot9_raha=parseInt(bot9_raha)-parseInt(randomnumber);
+			document.getElementById("stack9").innerHTML="$"+bot9_raha;
+			fn_command2("Player 9 betted $" + randomnumber);
+		}
 		else {
-		alert("NO MONEY (起o)");
-}
+			alert("NO MONEY (起o)");
+		}
+	}
 }
 
 
