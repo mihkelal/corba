@@ -21,6 +21,84 @@ var BB = 6;
 
 var round = 0;
 
+function alusta_mangu() {
+	diilercount++;
+	if (parseInt(diilercount) == 10){
+		diilercount -=10;
+		round += 1;
+	}
+	switch (parseInt(diilercount))
+	{
+	case 0:
+		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role10").innerHTML=<div id = "role10"></div>;
+	  break;
+	case 1:
+		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role1").innerHTML=<div id = "role1"></div>;
+	  break;
+	case 2:
+		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role2").innerHTML=<div id = "role2"></div>;
+	  break;
+	case 3:
+		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role3").innerHTML=<div id = "role3"></div>;
+	  break;
+	case 4:
+		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"></div>;
+	  break;
+	case 5:
+		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"></div>;
+	  break;
+	case 6:
+		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"></div>;
+	  break;
+	case 7:
+		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role7").innerHTML=<div id = "role7"></div>;
+	  break;
+	case 8:
+		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role8").innerHTML=<div id = "role8"></div>;
+	  break;
+	case 9:
+		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
+		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
+		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
+		document.getElementById("role9").innerHTML=<div id = "role9"></div>;
+	  break;
+	default:
+		document.write("error");
+	}
+	
+	var alusta = document.getElementById("example1");
+	alusta.appendChild(document.createElement('br'));
+	alusta.appendChild(document.createTextNode("game on"));
+	alusta.appendChild(document.createElement('br'));
+
+}
 function addmoney()
 	{
 		panus++
@@ -144,39 +222,45 @@ function fn_bet_how_much(elem){
 }
 
 function to_pot(){
-	if (parseInt(panus) <= parseInt(mangija_raha)){
-		pot=parseInt(pot)+parseInt(panus);
-		document.getElementById("pot").innerHTML="$"+pot;				
-		mangija_raha=parseInt(mangija_raha)-parseInt(panus);
-		document.getElementById("stack").innerHTML="$"+mangija_raha;
-		panus = 0;
-		document.getElementById("bet").innerHTML="$"+panus;
-		
-		Botkaigud();	
-		if (ring == 1){
-			document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
-		
-			document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
-		
-			document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
-			ring+=1;
-		}
-		else if (ring == 2){
-			document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[24] +".png' width='34' height='50'/></div>";
-			ring+=1;	
-		}
-		else if (ring == 3){
-			document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[2] +".png' width='34' height='50'/></div>";
-			ring+=1;
-		}
-
-	}
 	
-	else {
-		var error = document.getElementById("example1");
-		error.appendChild(document.createElement('br'));
-		error.appendChild(document.createTextNode("pole piisavalt raha"));
-		error.appendChild(document.createElement('br'));
+	if (ring !=4) {
+		if (parseInt(panus) <= parseInt(mangija_raha)){
+			pot=parseInt(pot)+parseInt(panus);
+			document.getElementById("pot").innerHTML="$"+pot;				
+			mangija_raha=parseInt(mangija_raha)-parseInt(panus);
+			document.getElementById("stack").innerHTML="$"+mangija_raha;
+			panus = 0;
+			document.getElementById("bet").innerHTML="$"+panus;
+			
+			Botkaigud();	
+			if (ring == 1){
+				document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
+			
+				document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
+			
+				document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
+				ring+=1;
+			}
+			else if (ring == 2){
+				document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[24] +".png' width='34' height='50'/></div>";
+				ring+=1;	
+			}
+			else if (ring == 3){
+				document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[2] +".png' width='34' height='50'/></div>";
+				ring+=1;
+				mis_kaart_kellele();
+			}
+
+		}
+		else {
+			var error = document.getElementById("example1");
+			error.appendChild(document.createElement('br'));
+			error.appendChild(document.createTextNode("pole piisavalt raha"));
+			error.appendChild(document.createElement('br'));
+	}
+
+	
+
 	}
 
 }
@@ -423,86 +507,6 @@ if (parseInt(diilercount) == 8){
 	}
 }
 
-
-function alusta_mangu() {
-	diilercount++;
-	if (parseInt(diilercount) == 10){
-		diilercount -=10;
-		round += 1;
-	}
-	switch (parseInt(diilercount))
-	{
-	case 0:
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10"></div>;
-	  break;
-	case 1:
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1"></div>;
-	  break;
-	case 2:
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2"></div>;
-	  break;
-	case 3:
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3"></div>;
-	  break;
-	case 4:
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"></div>;
-	  break;
-	case 5:
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"></div>;
-	  break;
-	case 6:
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"></div>;
-	  break;
-	case 7:
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7"></div>;
-	  break;
-	case 8:
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8"></div>;
-	  break;
-	case 9:
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9"></div>;
-	  break;
-	default:
-		document.write("error");
-	}
-	
-	var alusta = document.getElementById("example1");
-	alusta.appendChild(document.createElement('br'));
-	alusta.appendChild(document.createTextNode("game on"));
-	alusta.appendChild(document.createElement('br'));
-
-}
-
 function fn_command(elem){
 	var newText = document.createTextNode(elem.value);
 	var para = document.getElementById("example1");
@@ -528,4 +532,11 @@ function voitja(){
 	
 	pot=0;
 	document.getElementById("pot").innerHTML="$"+pot;	
+}
+
+function mang(){
+	alusta_mangu();
+	segamine();
+	to_pot();
+	mis_kaart_kellele();
 }
