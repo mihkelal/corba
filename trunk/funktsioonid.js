@@ -12,16 +12,7 @@ var bot6_raha = 100;
 var bot7_raha = 100;
 var bot8_raha = 100;
 var bot9_raha = 100;
-
-var bot1_panus = 100;
-var bot2_panus = 100;
-var bot3_panus = 100;
-var bot4_panus = 100;
-var bot5_panus = 100;
-var bot6_panus = 100;
-var bot7_panus = 100;
-var bot8_panus = 100;
-var bot9_panus = 100;
+var list3 = [];
 
 var Dealer = o;
 var SB = 1;
@@ -66,33 +57,35 @@ function segamine(){
 //		document.write("<br>");
 //	}
 
-list1 = [1,2,"./images/ace.png",4,5,6,7];
+list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
 list2 = [];
 
 //document.getElementById("player91").innerHTML=<img src=list1[2] width="50" height="75"/>;
 //midagi = new Array(kaart: "./images/ace.png", name: "fdd")
 //src=midagi.kaart [5]
-
+var kaardidd=52;
 var ajutine;
 var x;
 //list2[10]=5;
 //document.write(list2.length);
 //document.write(list2[10]);
-for (ajutine=0;ajutine<7;ajutine++) {
-	x=Math.floor(Math.random()*7);
+for (ajutine=0;ajutine<kaardidd;ajutine++) {
+	x=Math.floor(Math.random()*kaardidd);
 	while (list1[x] == 0) {
-		x=Math.floor(Math.random()*7);
+		x=Math.floor(Math.random()*kaardidd);
 	}
 	list2[ajutine] = list1[x];
 	list1[x] = 0;
 	
 		
 }
-var ajutine2;
-for (ajutine2=0;ajutine2<7;ajutine2++) {
-	document.write(list2[ajutine2]);
-	document.write("<br>");
-}
+list3=list2;
+//var ajutine2;
+//for (ajutine2=0;ajutine2<kaardidd;ajutine2++) {
+//	document.write(list2[ajutine2]);
+//	document.write("<br>");
+//}
+mis_kaart_kellele();
 //for (ajutine2=0;ajutine2<7;ajutine2++) {
 //	<img src=list2[ajutine2] width="50" height="75"/>;
 //}
@@ -100,19 +93,77 @@ for (ajutine2=0;ajutine2<7;ajutine2++) {
 
 function mis_kaart_kellele(){
 	
-	var ajutine;
+	var ajutine22;
 	var mangija = [];
-	for (ajutine = 0; ajutine < 20; ajutine++){
-		switch (5)
+	var midagi = 22;
+	for (ajutine22 = 0; ajutine22 < 20; ajutine22++){
+		switch (ajutine22)
 		{
+		case 0:
+			document.getElementById("player11").innerHTML="<div id='player11'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 1:
+			document.getElementById("player12").innerHTML="<div id='player12'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 2:
+			document.getElementById("player21").innerHTML="<div id='player21'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 3:
+			document.getElementById("player22").innerHTML="<div id='player22'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 4:
+			document.getElementById("player31").innerHTML="<div id='player31'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
 		case 5:
-			document.getElementById("player11").innerHTML=<img src="./images/ace.png" width="50" height="75"/>;
+			document.getElementById("player32").innerHTML="<div id='player32'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 6:
+			document.getElementById("player41").innerHTML="<div id='player41'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 7:
+			document.getElementById("player42").innerHTML="<div id='player42'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 8:
+			document.getElementById("player51").innerHTML="<div id='player51'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 9:
+			document.getElementById("player52").innerHTML="<div id='player52'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 10:
+			document.getElementById("player61").innerHTML="<div id='player61'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 11:
+			document.getElementById("player62").innerHTML="<div id='player62'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 12:
+			document.getElementById("player71").innerHTML="<div id='player71'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 13:
+			document.getElementById("player72").innerHTML="<div id='player72'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 14:
+			document.getElementById("player81").innerHTML="<div id='player81'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 15:
+			document.getElementById("player82").innerHTML="<div id='player82'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 16:
+			document.getElementById("player91").innerHTML="<div id='player91'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 17:
+			document.getElementById("player92").innerHTML="<div id='player92'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 18:
+			document.getElementById("player101").innerHTML="<div id='player101'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 19:
+			document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
 		  break;
 		default:
-		  document.write("error");
+			document.write("error");
 		}
 	}
-
+	
 }
 
 
@@ -148,10 +199,6 @@ function to_pot(){
 		document.getElementById("bet").innerHTML="$"+panus;
 
 	}
-	document.getElementById("player11").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
-	document.getElementById("player22").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
-	document.getElementById("player31").innerHTML=<div><img src="./images/p1.png" width="50" height="75" /></div>;
-	document.getElementById("player42").innerHTML=<div><img src="./images/ace.png" width="50" height="75" /></div>;
 
 	Botkaigud();
 	
