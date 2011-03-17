@@ -96,7 +96,7 @@ function mis_kaart_kellele(){
 	var ajutine22;
 	var mangija = [];
 	var midagi = 22;
-	for (ajutine22 = 0; ajutine22 < 20; ajutine22++){
+	for (ajutine22 = 0; ajutine22 < 25; ajutine22++){
 		switch (ajutine22)
 		{
 		case 0:
@@ -158,6 +158,21 @@ function mis_kaart_kellele(){
 		  break;
 		case 19:
 			document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
+		  break;
+		case 20:
+			document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
+		  break;
+		case 21:
+			document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
+		  break;
+		case 22:
+			document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
+		  break;
+		case 23:
+			document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
+		  break;
+		case 24:
+			document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[ajutine22] +".png' width='34' height='50'/></div>";
 		  break;
 		default:
 			document.write("error");
