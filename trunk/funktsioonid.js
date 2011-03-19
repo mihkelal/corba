@@ -13,7 +13,7 @@ var ring = 1;
 var SB = 3;
 var BB = 6;
 
-var round = 0;
+var round = 1;  
 var Dealer = o;
 
 function alusta_mangu() {
@@ -22,6 +22,7 @@ function alusta_mangu() {
 		diilercount -=10;
 		round += 1;
 	}
+	
 	switch (parseInt(diilercount))
 	{
 	case 0:
@@ -89,43 +90,39 @@ function alusta_mangu() {
 	}
 	
 	var alusta = document.getElementById("example1");
-	alusta.appendChild(document.createElement('br'));
 	alusta.appendChild(document.createTextNode("game on"));
 	alusta.appendChild(document.createElement('br'));
-
+	alusta.appendChild(document.createTextNode("command line# "));
 }
-function addmoney()
-	{
-		panus++
-		document.getElementById("bet").innerHTML="$"+panus;
-	}
+
+function addmoney(){
+	panus++
+	document.getElementById("bet").innerHTML="$"+panus;
+}
 
 function segamine(){
 
-list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
-list2 = [];
+	list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
+	list2 = [];
 
-var kaardidd=52;
-var ajutine;
-var x;
+	var kaardidd=52;
+	var ajutine;
+	var x;
 
-for (ajutine=0;ajutine<kaardidd;ajutine++) {
-	x=Math.floor(Math.random()*kaardidd);
-	while (list1[x] == 0) {
+	for (ajutine=0;ajutine<kaardidd;ajutine++){
 		x=Math.floor(Math.random()*kaardidd);
+		while (list1[x] == 0) {
+			x=Math.floor(Math.random()*kaardidd);
+		}
+		list2[ajutine] = list1[x];
+		list1[x] = 0;
 	}
-	list2[ajutine] = list1[x];
-	list1[x] = 0;
-	
-		
-}
-list3=list2;
+	list3=list2;
 
-var segamise_kuvamine = document.getElementById("example1");
-segamise_kuvamine.appendChild(document.createElement('br'));
-segamise_kuvamine.appendChild(document.createTextNode("kaardid on segatud"));
-segamise_kuvamine.appendChild(document.createElement('br'));
-para.appendChild(document.createTextNode("command line# "));
+	var segamise_kuvamine = document.getElementById("example1");
+	segamise_kuvamine.appendChild(document.createTextNode("kaardid on segatud"));
+	segamise_kuvamine.appendChild(document.createElement('br'));
+	segamise_kuvamine.appendChild(document.createTextNode("command line# "));
 }
 
 function mis_kaart_kellele(){
@@ -195,17 +192,16 @@ function mis_kaart_kellele(){
 		case 19:
 			document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
 		  break;
-
 		default:
 			document.write("error");
 		}
 	}
+
 	var kaartide_kuvamine = document.getElementById("example1");
-	kaartide_kuvamine.appendChild(document.createElement('br'));
 	kaartide_kuvamine.appendChild(document.createTextNode("kaardid on kuvatud"));
 	kaartide_kuvamine.appendChild(document.createElement('br'));
+	kaartide_kuvamine.appendChild(document.createTextNode("command line# "));
 }
-
 
 function fsisend(){	
 	document.write(document.text.Bet);
@@ -217,22 +213,19 @@ function fn_bet_how_much(elem){
 }
 
 function to_pot(){
-	
 	if (ring !=4) {
 		if (parseInt(panus) <= parseInt(mangija_raha)){
 			pot=parseInt(pot)+parseInt(panus);
-			document.getElementById("pot").innerHTML="$"+pot;				
+			document.getElementById("pot").innerHTML="$"+pot;
 			mangija_raha=parseInt(mangija_raha)-parseInt(panus);
 			document.getElementById("stack").innerHTML="$"+mangija_raha;
 			panus = 0;
 			document.getElementById("bet").innerHTML="$"+panus;
 			
-			Botkaigud();	
+			Botkaigud();
 			if (ring == 1){
 				document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
-			
 				document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
-			
 				document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
 				ring+=1;
 			}
@@ -245,19 +238,14 @@ function to_pot(){
 				ring+=1;
 				mis_kaart_kellele();
 			}
-
 		}
 		else {
 			var error = document.getElementById("example1");
 			error.appendChild(document.createElement('br'));
 			error.appendChild(document.createTextNode("pole piisavalt raha"));
 			error.appendChild(document.createElement('br'));
+		}
 	}
-
-	
-
-	}
-
 }
 
 function Botkaigud(){
@@ -273,310 +261,72 @@ function Botkaigud(){
 }
 
 function Botkaik(nr){
-randomnumber = 100;
-var nra = nr + 1;
-	if (bot_out[nr] == 0){                              // nr  nr
-		if (parseInt(diilercount) == nr){ // nr - 0          // if nr == diilercount
-			
+	var dorandom = 1;
+	var randomnumber = 1;
+	var nra = nr + 1;
+	if (bot_out[nr] == 0){                                                    // nr  nr
+		if (parseInt(diilercount) == nr){ // nr - 0                             // if nr == diilercount
+			fn_command2("Player" + nra + " is dealer");
 		}
 		else{
-			if ((parseInt(diilercount)-1 == nr)||(nr == 0 && diilercount == 9)){ // nr - 1        // if nr == 0 && diilercount == 9 ||
-				var randomnumber=3;                             // nr == diilercount-1
+			if ((parseInt(diilercount) == nr-1)||(nr == 0 && diilercount == 9)){ // nr - 1        // if nr == 0 && diilercount == 9 ||
+				var randomnumber=3;                                                // nr == diilercount-1
+				var dorandom = 0;
 			}
 			
-			if ((parseInt(diilercount)-2 == nr)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){ // nr - 3        // if nr == 0 && diilercount == 8 ||
-				var randomnumber=6;                             // nr == 1 && diilercount == 9 ||
-			}                                                 // nr == diilercount-2
-			
-			var randomn=Math.floor(Math.random()*3);
-			switch(randomn)
-			{
-				case 0:
-				alert("case0");
-					bot_out[nr] = 1;                            // nr
-					fn_command2("Player" + nra + "folds");             // nr
-					break
-				case 1:
-					randomnumber = BB;
-					break
-				case 2:
-					randomnumber = BB*2;
-					suurim_panus = randomnumber;
-					break
+			if ((parseInt(diilercount) == nr-2)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){ // nr - 3        // if nr == 0 && diilercount == 8 ||
+				var randomnumber=6;                                                 // nr == 1 && diilercount == 9 ||
+				var dorandom = 0;                                                   // nr == diilercount-2
 			}
-			if (randomnumber <= parseInt(bot_raha[nr]) && bot_out[nr]==0){    // nr
-				alert("panu");
+			
+			if (dorandom == 1) {
+				var randomn=Math.floor(Math.random()*3);
+				switch(randomn)
+				{
+					case 0:
+						bot_out[nr] = 1;                                                     // nr
+						fn_command2("Player" + nra + " folds");                                  // nr
+						break
+					case 1:
+						randomnumber = BB;
+						if (suurim_panus > randomnumber){
+							randomnumber = suurim_panus;
+						}
+						break
+					case 2:
+						if (suurim_panus < 24){
+							randomnumber = suurim_panus+BB;
+							suurim_panus += BB;
+							}
+						else {
+							randomnumber = suurim_panus;
+						}
+						break
+				}
+			}
+			
+			if (randomnumber <= parseInt(bot_raha[nr]) && bot_out[nr]==0){             // nr
+				//POT
 				pot=parseInt(pot)+parseInt(randomnumber);
 				document.getElementById("pot").innerHTML="$"+pot;
-				bot_raha[nr]=parseInt(bot_raha[nr])-parseInt(randomnumber);        // nr   nr
+				
+				//BOT_RAHA
+				bot_raha[nr]=parseInt(bot_raha[nr])-parseInt(randomnumber);                 // nr   nr
 				document.getElementById("stack" + nra).innerHTML="$"+bot_raha[nr];
-				      // nr   nr
-				alert("case0");
-				fn_command2("Player" + nra + "betted $" + randomnumber);                 // nr
-				alert("panu2");
+				
+				//CMD LINE
+				fn_command2("Player" + nra + " betted $" + randomnumber);                 // nr
 			}
 			else {
-				bot_out[nr] = 1;                                                  // nr
-				fn_command2("Player" + nra + "folds (no money)");                         // nr
-			}
-		}
-	}
-	
-}
-
-/* function Botkaik2(){
-	if (bot_out[1] == 0){
-		if (parseInt(diilercount) == 1){
-			
-		}
-		else{
-			if (parseInt(diilercount) == 0){
-				var randomnumber=3;
-			}
-			if (parseInt(diilercount) == 9){
-				var randomnumber=6;
-			}
-			
-			var randomn=Math.floor(Math.random()*3);
-			switch(randomn)
-			{
-				case 0:
-					bot_out[1] = 1;
-					fn_command2("Player 2 folds");
-					break
-				case 1:
-					randomnumber = BB;
-					break
-				case 2:
-					randomnumber = BB*2;
-					suurim_panus = randomnumber;
-					break
-			}
-			if (randomnumber <= parseInt(bot_raha[1])){
-				pot=parseInt(pot)+parseInt(randomnumber);
-				document.getElementById("pot").innerHTML="$"+pot;
-				bot_raha[1]=parseInt(bot_raha[1])-parseInt(randomnumber);
-				document.getElementById("stack2").innerHTML="$"+bot_raha[1];
-				fn_command2("Player 2 betted $" + randomnumber);
-			}
-			else {
-				bot_out[1] = 1;
-				fn_command2("Player 2 folds (no money)");
+				if ( bot_out[nr] = 0) {
+					bot_out[nr] = 1;                                                         // nr
+					fn_command2("Player" + nra + " folds (no money)");                         // nr
+				}
 			}
 		}
 	}
 }
 
-function Botkaik3(){
-	if (bot_out[2] == 0){
-		if (parseInt(diilercount) == 2){
-			
-		}
-		else{
-			if (parseInt(diilercount) == 1){
-				var randomnumber=3;
-			}
-			if (parseInt(diilercount) == 0){
-				var randomnumber=6;
-			}
-			
-			var randomn=Math.floor(Math.random()*3);
-			switch(randomn)
-			{
-				case 0:
-					bot_out[2] = 1;
-					fn_command2("Player 3 folds");
-					break
-				case 1:
-					randomnumber = BB;
-					break
-				case 2:
-					randomnumber = BB*2;
-					suurim_panus = randomnumber;
-					break
-			}
-			if (randomnumber <= parseInt(bot_raha[2])){
-				pot=parseInt(pot)+parseInt(randomnumber);
-				document.getElementById("pot").innerHTML="$"+pot;
-				bot_raha[2]=parseInt(bot_raha[2])-parseInt(randomnumber);
-				document.getElementById("stack3").innerHTML="$"+bot_raha[2];
-				fn_command2("Player 3 betted $" + randomnumber);
-			}
-			else {
-				bot_out[2] = 1;
-				fn_command2("Player 3 folds (no money)");
-			}
-		}
-	}
-}
-
-
-function Botkaik4(){
-	if (bot_out[3] == 0){
-		if (parseInt(diilercount) == 3){
-			
-		}
-		else{
-			if (parseInt(diilercount) == 2){
-				randomnumber=3;
-			}
-			if (parseInt(diilercount) == 1){
-				var randomnumber=6;
-			}
-			var randomn=Math.floor(Math.random()*3);
-			switch(randomn)
-			{
-				case 0:
-					bot_out[3] = 1;
-					fn_command2("Player 4 folds");
-					break
-				case 1:
-					randomnumber = BB;
-					break
-				case 2:
-					randomnumber = BB*2;
-					suurim_panus = randomnumber;
-					break
-			}
-			if (randomnumber <= parseInt(bot_raha[3])){
-				pot=parseInt(pot)+parseInt(randomnumber);
-				document.getElementById("pot").innerHTML="$"+pot;
-				bot_raha[3]=parseInt(bot_raha[3])-parseInt(randomnumber);
-				document.getElementById("stack4").innerHTML="$"+bot_raha[3];
-				fn_command2("Player 4 betted $" + randomnumber);
-			}
-			else {
-				bot_out[3] = 1;
-				fn_command2("Player 4 folds (no money)");
-			}
-		}
-	}
-}
-
-function Botkaik5(){
-	if (parseInt(diilercount) == 4){
-		
-	}
-	else{
-		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 3){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 2){
-			var randomnumber=6;
-		}
-		if (randomnumber <= parseInt(bot_raha[4])){
-			pot=parseInt(pot)+parseInt(randomnumber);
-			document.getElementById("pot").innerHTML="$"+pot;
-			bot_raha[4]=parseInt(bot_raha[4])-parseInt(randomnumber);
-			document.getElementById("stack5").innerHTML="$"+bot_raha[4];
-			fn_command2("Player 5 betted $" + randomnumber);
-		}
-		else {
-			alert("NO MONEY (起o)");
-		}
-	}
-}
-
-function Botkaik6(){
-	if (parseInt(diilercount) == 5){
-		
-	}
-	else{
-		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 4){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 3){
-			var randomnumber=6;
-		}
-		if (randomnumber <= parseInt(bot_raha[5])){
-			pot=parseInt(pot)+parseInt(randomnumber);
-			document.getElementById("pot").innerHTML="$"+pot;
-			bot_raha[5]=parseInt(bot_raha[5])-parseInt(randomnumber);
-			document.getElementById("stack6").innerHTML="$"+bot_raha[5];
-			fn_command2("Player 6 betted $" + randomnumber);
-		}
-		else {
-			alert("NO MONEY (起o)");
-		}
-	}
-}
-
-function Botkaik7(){
-	if (parseInt(diilercount) == 6){
-		
-	}
-	else{
-		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 5){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 4){
-			var randomnumber=6;
-		}
-		if (randomnumber <= parseInt(bot_raha[6])){
-			pot=parseInt(pot)+parseInt(randomnumber);
-			document.getElementById("pot").innerHTML="$"+pot;
-			bot_raha[6]=parseInt(bot_raha[6])-parseInt(randomnumber);
-			document.getElementById("stack7").innerHTML="$"+bot_raha[6];
-			fn_command2("Player 7 betted $" + randomnumber);
-		}
-		else {
-			alert("NO MONEY (起o)");
-		}
-	}
-}
-
-function Botkaik8(){
-if (parseInt(diilercount) == 7){
-		
-	}
-	else{
-		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 6){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 5){
-			var randomnumber=6;
-		}
-		if (randomnumber <= parseInt(bot_raha[7])){
-			pot=parseInt(pot)+parseInt(randomnumber);
-			document.getElementById("pot").innerHTML="$"+pot;
-			bot_raha[7]=parseInt(bot_raha[7])-parseInt(randomnumber);
-			document.getElementById("stack8").innerHTML="$"+bot_raha[7];
-			fn_command2("Player 8 betted $" + randomnumber);
-		}
-		else {
-			alert("NO MONEY (起o)");
-		}
-	}
-}
-
-function Botkaik9(){
-if (parseInt(diilercount) == 8){
-		
-	}
-	else{
-		var randomnumber=Math.floor(Math.random()*11);
-		if (parseInt(diilercount) == 7){
-			randomnumber=3;
-		}
-		if (parseInt(diilercount) == 6){
-			var randomnumber=6;
-		}
-		if (randomnumber <= parseInt(bot_raha[8])){
-			pot=parseInt(pot)+parseInt(randomnumber);
-			document.getElementById("pot").innerHTML="$"+pot;
-			bot_raha[8]=parseInt(bot_raha[8])-parseInt(randomnumber);
-			document.getElementById("stack9").innerHTML="$"+bot_raha[8];
-			fn_command2("Player 9 betted $" + randomnumber);
-		}
-		else {
-			alert("NO MONEY (起o)");
-		}
-	}
-} */
 
 function fn_command(elem){
 	var newText = document.createTextNode(elem.value);
@@ -584,7 +334,6 @@ function fn_command(elem){
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
 	para.appendChild(document.createTextNode("command line# "));
-	
 }
 
 
@@ -594,13 +343,11 @@ function fn_command2(elem){
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
 	para.appendChild(document.createTextNode("command line# "));
-	
 }
 
 function voitja(){
 	mangija_raha+=pot;
 	document.getElementById("stack").innerHTML="$"+mangija_raha;
-	
 	pot=0;
 	document.getElementById("pot").innerHTML="$"+pot;	
 }
@@ -609,5 +356,4 @@ function mang(){
 	alusta_mangu();
 	segamine();
 	to_pot();
-	mis_kaart_kellele();
 }
