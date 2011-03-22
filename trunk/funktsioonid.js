@@ -4,23 +4,22 @@ var suurim_panus = 0;
 var mangija_raha = 100;
 var diilercount = 7;
 
-var bot_raha=[100, 100, 100, 100, 100, 100, 100, 100, 100];
+var bot_raha=[100, 100, 100, 100, 100, 100, 100, 100];
 var bot_out=[0, 0, 0, 0, 0, 0, 0, 0, 0];
-
+var bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
+var dont = 0;
 var list3 = [];
 var ring = 1;
 
 var SB = 3;
 var BB = 6;
 
-var round = 1;  
 var Dealer = o;
 
 function alusta_mangu() {
 	diilercount++;
 	if (parseInt(diilercount) == 10){
 		diilercount -=10;
-		round += 1;
 	}
 	
 	switch (parseInt(diilercount))
@@ -258,6 +257,14 @@ function Botkaigud(){
 	Botkaik(6);
 	Botkaik(7);
 	Botkaik(8);
+	//for (i=0;i<=8;i++){
+	//	if (bot_bet[i] < suurim_panus){
+	//		if (bot_out[i] == 0){
+	//			Botkaik(i);
+	//		}
+	//	}
+	//}
+	suurim_panus = 0;
 }
 
 function Botkaik(nr){
@@ -270,38 +277,59 @@ function Botkaik(nr){
 		}
 		else{
 			if ((parseInt(diilercount) == nr-1)||(nr == 0 && diilercount == 9)){ // nr - 1        // if nr == 0 && diilercount == 9 ||
-				var randomnumber=3;                                                // nr == diilercount-1
-				var dorandom = 0;
+				if (round = 1 && dont == 0){
+					randomnumber=SB;                                                // nr == diilercount-1
+					dorandom = 0;
+					bot_bet[nr] = randomnumber;
+				}
 			}
 			
 			if ((parseInt(diilercount) == nr-2)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){ // nr - 3        // if nr == 0 && diilercount == 8 ||
-				var randomnumber=6;                                                 // nr == 1 && diilercount == 9 ||
-				var dorandom = 0;                                                   // nr == diilercount-2
+				if (round = 1 && dont == 0){
+					randomnumber=BB;                                                 // nr == 1 && diilercount == 9 ||
+					dorandom = 0;                                                   // nr == diilercount-2
+					bot_bet[nr] = randomnumber;
+				}
 			}
 			
 			if (dorandom == 1) {
 				var randomn=Math.floor(Math.random()*3);
 				switch(randomn)
 				{
-					case 0:
-						bot_out[nr] = 1;                                                     // nr
-						fn_command2("Player" + nra + " folds");                                  // nr
-						break
-					case 1:
+				case 0:
+					bot_out[nr] = 1;                                                     // nr
+					fn_command2("Player" + nra + " folds");                                  // nr
+					break;
+				case 1:
+					randomnumber = 2*BB;
+					if (ring == 2){
 						randomnumber = BB;
-						if (suurim_panus > randomnumber){
-							randomnumber = suurim_panus;
-						}
-						break
-					case 2:
-						if (suurim_panus < 24){
+					}
+					if (suurim_panus > randomnumber){
+						randomnumber = suurim_panus;
+					}
+					break;
+				case 2:
+					if (ring <= 2){
+						if (suurim_panus < 4*BB){
 							randomnumber = suurim_panus+BB;
 							suurim_panus += BB;
-							}
+						}
 						else {
 							randomnumber = suurim_panus;
 						}
-						break
+					}
+					else{
+						if (suurim_panus < 8*BB){
+							randomnumber = suurim_panus+BB;
+							suurim_panus += BB;
+						}
+						else {
+							randomnumber = suurim_panus;
+						}
+					}
+					break;
+				default:
 				}
 			}
 			
@@ -316,11 +344,14 @@ function Botkaik(nr){
 				
 				//CMD LINE
 				fn_command2("Player" + nra + " betted $" + randomnumber);                 // nr
+				dont = 1;
+				bot_bet[nr] = randomnumber;
 			}
 			else {
 				if ( bot_out[nr] = 0) {
 					bot_out[nr] = 1;                                                         // nr
 					fn_command2("Player" + nra + " folds (no money)");                         // nr
+					bot_bet[nr] = randomnumber;
 				}
 			}
 		}
