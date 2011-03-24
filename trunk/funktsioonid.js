@@ -2,7 +2,7 @@ var panus = 0;
 var pot = 0;
 var suurim_panus = 0;
 var mangija_raha = 100;
-var diilercount = 7;
+var diilercount = 9;
 
 var bot_raha=[100, 100, 100, 100, 100, 100, 100, 100];
 var bot_out=[0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -10,6 +10,8 @@ var bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var dont = 0;
 var list3 = [];
 var ring = 1;
+var round=1;
+var dorandom=1;
 
 var SB = 3;
 var BB = 6;
@@ -257,6 +259,8 @@ function Botkaigud(){
 	Botkaik(6);
 	Botkaik(7);
 	Botkaik(8);
+	//alert(bot_out);
+	round++;
 	//for (i=0;i<=8;i++){
 	//	if (bot_bet[i] < suurim_panus){
 	//		if (bot_out[i] == 0){
@@ -268,37 +272,53 @@ function Botkaigud(){
 }
 
 function Botkaik(nr){
-	var dorandom = 1;
+if (nr==8) alert(bot_out);
+	dorandom=1;
 	var randomnumber = 1;
 	var nra = nr + 1;
-	if (bot_out[nr] == 0){                                                    // nr  nr
-		if (parseInt(diilercount) == nr){ // nr - 0                             // if nr == diilercount
-			fn_command2("Player" + nra + " is dealer");
-		}
+	if (parseInt(diilercount) == nr){
+		fn_command2("Player" + nra + " is dealer");}
+	else{
+		if (bot_out[nr] == 1){}
 		else{
-			if ((parseInt(diilercount) == nr-1)||(nr == 0 && diilercount == 9)){ // nr - 1        // if nr == 0 && diilercount == 9 ||
-				if (round = 1 && dont == 0){
-					randomnumber=SB;                                                // nr == diilercount-1
+			if ((parseInt(diilercount) == nr-1) || (nr == 0 && diilercount == 9)){
+				if (round == 1){
 					dorandom = 0;
-					bot_bet[nr] = randomnumber;
+					if (SB < bot_raha[nr]-1){
+						randomnumber=SB;
+						bot_bet[nr] = randomnumber;
+						if (suurim_panus<randomnumber){
+							suurim_panus = randomnumber;}
+					}
+					else{
+						bot_out[nr] = 1;
+						fn_command2("Player" + nra + " foldss");
+					}
+				}
+			}
+			if ((parseInt(diilercount) == nr-2)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){
+				if (round == 1){
+					dorandom = 0;
+					if (BB < bot_raha[nr]-1){
+						randomnumber=BB;
+						bot_bet[nr] = randomnumber;
+						if (suurim_panus<randomnumber){
+							suurim_panus = randomnumber;}
+					}
+					else{
+						bot_out[nr] = 1;
+						fn_command2("Player" + nra + " foldsa");
+					}
 				}
 			}
 			
-			if ((parseInt(diilercount) == nr-2)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){ // nr - 3        // if nr == 0 && diilercount == 8 ||
-				if (round = 1 && dont == 0){
-					randomnumber=BB;                                                 // nr == 1 && diilercount == 9 ||
-					dorandom = 0;                                                   // nr == diilercount-2
-					bot_bet[nr] = randomnumber;
-				}
-			}
-			
-			if (dorandom == 1) {
+			if (dorandom == 1){
 				var randomn=Math.floor(Math.random()*3);
 				switch(randomn)
 				{
 				case 0:
-					bot_out[nr] = 1;                                                     // nr
-					fn_command2("Player" + nra + " folds");                                  // nr
+					bot_out[nr] = 1;
+					fn_command2("Player" + nra + " folds");
 					break;
 				case 1:
 					randomnumber = 2*BB;
@@ -332,25 +352,25 @@ function Botkaik(nr){
 				default:
 				}
 			}
-			
-			if (randomnumber <= parseInt(bot_raha[nr]) && bot_out[nr]==0){             // nr
+				
+			if (randomnumber <= parseInt(bot_raha[nr]) && bot_out[nr]==0){
 				//POT
 				pot=parseInt(pot)+parseInt(randomnumber);
 				document.getElementById("pot").innerHTML="$"+pot;
 				
 				//BOT_RAHA
-				bot_raha[nr]=parseInt(bot_raha[nr])-parseInt(randomnumber);                 // nr   nr
+				bot_raha[nr]=parseInt(bot_raha[nr])-parseInt(randomnumber);
 				document.getElementById("stack" + nra).innerHTML="$"+bot_raha[nr];
 				
 				//CMD LINE
-				fn_command2("Player" + nra + " betted $" + randomnumber);                 // nr
+				fn_command2("Player" + nra + " betted $" + randomnumber);
 				dont = 1;
 				bot_bet[nr] = randomnumber;
 			}
 			else {
-				if ( bot_out[nr] = 0) {
-					bot_out[nr] = 1;                                                         // nr
-					fn_command2("Player" + nra + " folds (no money)");                         // nr
+				if (bot_out[nr] == 0){
+					bot_out[nr] = 1;
+					fn_command2("Player" + nra + " folds (no money)");
 					bot_bet[nr] = randomnumber;
 				}
 			}
