@@ -224,18 +224,19 @@ function to_pot(){
 			
 			Botkaigud();
 			if (ring == 1){
-				document.getElementById("acard1").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
-				document.getElementById("acard2").innerHTML="<div class='acard' id='acard2'><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
-				document.getElementById("acard3").innerHTML="<div class='acard' id='acard3'><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
+				document.getElementById("acard1").innerHTML="<div class='acard' ><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
+				document.getElementById("acard2").innerHTML="<div class='acard' ><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
+				document.getElementById("acard3").innerHTML="<div class='acard' ><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
 				ring+=1;
 			}
 			else if (ring == 2){
-				document.getElementById("acard4").innerHTML="<div class='acard' id='acard4'><img src='./cards/"+ list3[24] +".png' width='34' height='50'/></div>";
-				ring+=1;	
+				document.getElementById("acard4").innerHTML="<div class='acard' ><img src='./cards/"+ list3[24] +".png' width='34' height='50'/></div>";
+				ring+=1;
 			}
 			else if (ring == 3){
-				document.getElementById("acard5").innerHTML="<div class='acard' id='acard1'><img src='./cards/"+ list3[2] +".png' width='34' height='50'/></div>";
+				document.getElementById("acard5").innerHTML="<div class='acard' '><img src='./cards/"+ list3[2] +".png' width='34' height='50'/></div>";
 				ring+=1;
+				mangija_bet = 0;
 				mis_kaart_kellele();
 			}
 		}
@@ -275,9 +276,9 @@ function Botkaigud(){
 	}
 	round++;
 	fn_command("Round " + (round));
-		alert(suurim_panus);
+		
 	for (i=0;i<=8;i++){
-							if (i==1) alert(bot_bet[i]);
+							//if (i==1) alert(bot_bet[i]);
 		if (bot_bet[i] < suurim_panus){
 			if (bot_out[i] == 0){
 				Botkaik(i);

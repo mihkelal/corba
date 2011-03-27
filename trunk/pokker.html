@@ -3,254 +3,168 @@
 		<title>Pokker</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<script type="text/javascript" src="funktsioonid.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-	<!--
-	<div id = "taust1" style="float: left "><IMG src="./images/aar1.png"></div>
-	<div id = "taust2" style="float: right "><IMG src="./images/aar2.png"></div>
-	-->
+		<script type="text/javascript" src="compare_cards.js"></script>
+	<div id = "taust1" style="float: left "></div>
+	<div id = "taust2" style="float: right "></div>
 	</head>
-	<body>
-		<table class="table">
+	<body>	
+
+	<div><img src="./images/pokker.png" width="1200" height="300"/></div>
+	
+		<table class="table">			
 			<tr>
 				<td>
-					<div class="pokertable">
+					
+					
+					<div><img src="./images/board.png" width="800" height="550"/></div>
+					
+					<div class ="player1" id="player1">
+						<div id="player11"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player12"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player1</div>
+						<div class="stack" id="stack1">$100</div>
+						<div class="bet" id="bet1">$0</div>
+						<div class = "roll" id = "role1"></div>
+					</div>
+			
 
+					<div class = "player2" id="player2">
+						<div id="player21"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player22"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player2</div>
+						<div class="stack" id="stack2">$100</div>
+						<div class="bet" id="bet2">$0</div>
+						<div class = "roll" id = "role2"></div>
+					</div>
+				
 
+					<div class = "player3" id="player3">
+						<div id="player31"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player32"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player3</div>
+						<div class="stack" id="stack3">$100</div>
+						<div class="bet" id="bet3">$0</div>
+						<div class = "roll" id = "role3"></div>
+					</div>
+			
 
-						<!-- UPPER CARDROW -->
-						<table cellpadding="1" align="center">
-							<tr>
-								<td>
-									<div class ="player1" id="player1">
-										<div id="player11"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player12"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player1</div>
-										<div class="stack" id="stack1">$500</div>
-										<div class="bet" id="bet1">$0</div>
-										<div id = "role1"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player2" id="player2">
-										<div id="player21"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player22"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player2</div>
-										<div class="stack" id="stack2">$500</div>
-										<div class="bet" id="bet2">$0</div>
-										<div id = "role2"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player3" id="player3">
-										<div id="player31"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player32"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player3</div>
-										<div class="stack" id="stack3">$500</div>
-										<div class="bet" id="bet3">$0</div>
-										<div id = "role3"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player4" id="player4">
-										<div id="player41"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player42"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player4</div>
-										<div class="stack" id="stack4">$500</div>
-										<div class="bet" id="bet4">$0</div>
-										<div id = "role4"></div>
-									</div>
-								</td>
-							</tr>
-						</table>
+					<div class = "player4" id="player4">
+						<div id="player41"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player42"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player4</div>
+						<div class="stack" id="stack4">$100</div>
+						<div class="bet" id="bet4">$0</div>
+						<div class = "roll" id = "role4"></div>
+					</div>
+			
 
+					<div class = "player5" id="player5">
+						<div id="player51"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player52"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player5</div>
+						<div class="stack" id="stack5">$100</div>
+						<div class="bet" id="bet5">$0</div>
+						<div class = "roll" id = "role5"></div>
+					</div>
+				
+					<div id="acard0"><img src="./images/card back small.png" width="34" height="50"/></div>
+					<div id="acard1"><img src="./images/card back small.png" width="34" height="50"/></div>
+					<div id="acard2"><img src="./images/card back small.png" width="34" height="50"/></div>
+					<div id="acard3"><img src="./images/card back small.png" width="34" height="50"/></div>
+					<div id="acard4"><img src="./images/card back small.png" width="34" height="50"/></div>
+					<div id="acard5"><img src="./images/card back small.png" width="34" height="50"/></div>
+			
 
+					<div class="pot2" id="pot2">
+						<img src="./images/zoomed.png" width="120" height="80"/>
+						<div class="pot" id="pot">$0</div>
+					</div>
 
-						<!-- MIDDLE CARDROW -->
-						<table class="table20" cellpadding="1" align="center">
-							<td>
-								<div class = "player5" id="player5">
-									<div id="player51"><img src="./images/card back.png" width="50" height="75"/></div>
-									<div id="player52"><img src="./images/card back.png" width="50" height="75"/></div>
-									<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-									<div class="name">player5</div>
-									<div class="stack" id="stack5">$500</div>
-									<div class="bet" id="bet5">$0</div>
-									<div id = "role5"></div>
-									<div class="whitespace1"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cardbacksmall"></div>
-							</td>
-							<td>
-								<div class="acard" id="acard1"></div>
-							</td>
-							<td>
-								<div class="acard" id="acard2"></div>
-							</td>
-							<td>
-								<div class="acard" id="acard3"></div>
-							</td>
-							<td>
-								<div class="acard" id="acard4"></div>
-							</td>
-							<td>
-								<div class="acard" id="acard5"></div>
-							</td>
-							<td>
-								<div class="pot">
-									<img src="./images/zoomed.png" width="120" height="80"/>
-									<div class="pot" id="pot">$0</div>
-								</div>
-							</td>
-							<td>
-								<div class="whitespace2"></div>
-							</td>
-							<td>
-								<div class = "player6" id="player6">
-								<div id="player61"><img src="./images/card back.png" width="50" height="75"/></div>
-								<div id="player62"><img src="./images/card back.png" width="50" height="75"/></div>
-								<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-								<div class="name">player6</div>
-								<div class="stack" id="stack6">$500</div>
-								<div class="bet" id="bet6">$0</div>
-								<div id = "role6"></div>
-								<div class="whitespace1"></div>
-							</td>
-						</table>
+					<div class = "player6" id="player6">
+						<div id="player61"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player62"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player6</div>
+						<div class="stack" id="stack6">$100</div>
+						<div class="bet" id="bet6">$0</div>
+						<div class = "roll" id = "role6"></div>
+					</div>
 
-
-
-						<!-- LOWER CARDROW -->
-						<table class="table30" cellpadding="1" align="center">
-							<tr>
-								<td>
-									<div class = "player7" id="player7">
-										<div id="player71"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player72"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player7</div>
-										<div class="stack" id="stack7">$500</div>
-										<div class="bet" id="bet7">$0</div>
-										<div id = "role7"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player8" id="player8">
-										<div id="player81"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div id="player82"><img src="./images/card back.png" width="50" height="75"/></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player8</div>
-										<div class="stack" id="stack8">$500</div>
-										<div class="bet" id="bet8">$0</div>
-										<div id = "role8"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player9" id="player9">
-										<div id="player91"><img src="./images/card back.png" width="50" height="75" /></div>
-										<div id="player92"><img src="./images/card back.png" width="50" height="75" /></div>
-										<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-										<div class="name">player9</div>
-										<div class="stack" id="stack9">$500</div>
-										<div class="bet" id="bet9">$0</div>
-										<div id = "role9"></div>
-										<div class="whitespace1"></div>
-									</div>
-								</td>
-								<td>
-									<div class = "player10" id="player10">
-										<div onmouseover="className='zoom'" onmouseout="className='none'">
-											<div id="player101"><img src="./images/card back.png" width="50" height="75" /></div>
-											<div id="player102"><img src="./images/card back.png" width="50" height="75" /></div>
-											<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
-											<div class="name">Mängija</div>
-											<div class="stack" id="stack">$500</div>
-											<div class="bet" id="bet">$0</div>
-											<div id = "role10"></div>
-										</div>
-									</div>
-								</td>
-							</tr>
-						</table>
+					<div class = "player7" id="player7">
+						<div id="player71"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player72"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player7</div>
+						<div class="stack" id="stack7">$100</div>
+						<div class="bet" id="bet7">$0</div>
+						<div class = "roll" id = "role7"></div>
 					</div>
 
 
-
-					<!-- MIDDLE BUTTONS: BET ECT-->
-					<table class="table2" align="center">
-						<tr>
-							<td>
-								<form>
-									<input type='text' id='sisend2'/>
-									<input type='button' onclick="fn_bet_how_much(document.getElementById('sisend2'))" value='How much?'/>
-								</form>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="addmoney()">Raise</button>
-								</div>
-							</td>
-							<td>
-								<div style="padding-right:8;">
-									<button type="button" onclick="alusta_mangu()">Alusta mängu</button>
-								</div>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="segamine()">Sega</button>
-								</div>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="to_pot()">Bet</button>
-								</div>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="mis_kaart_kellele()">Kuva teiste kaardid</button>
-								</div>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="voitja()">määra võitja</button>
-								</div>
-							</td>
-							<td>
-								<div>
-									<button type="button" onclick="mang()">mäng</button>
-								</div>
-							</td>
-						</tr>
-					</table>
+					<div class = "player8" id="player8">
+						<div id="player81"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div id="player82"><img src="./images/card back.png" width="50" height="75"/></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player8</div>
+						<div class="stack" id="stack8">$100</div>
+						<div class="bet" id="bet8">$0</div>
+						<div class = "roll" id = "role8"></div>
+					</div>
 
 
+					<div class = "player9" id="player9">
+						<div id="player91"><img src="./images/card back.png" width="50" height="75" /></div>
+						<div id="player92"><img src="./images/card back.png" width="50" height="75" /></div>
+						<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+						<div class="name">player9</div>
+						<div class="stack" id="stack9">$100</div>
+						<div class="bet" id="bet9">$0</div>
+						<div class = "roll" id = "role9"></div>
+					</div>
 
-					<!-- CHAT AREA -->
-					<table class="table3" align="center">
-						<tr>
-							<td>
-								<div class="chatbox" id="chatbox">
-									<div class="chatarea" id="chatarea">
-										<p id="example1">command line# </p>
-									</div>
-									<form>
-										<input class="textbox" type='text' id='sisend3' size="79" maxlength="90"/>
-										<input type='button' onclick="fn_command(document.getElementById('sisend3'))" value='Send'/>
-									</form>
-								</div>
-							</td>
-						</tr>
-					</table>
+
+					<div class = "player10" id="player10">
+						<div onmouseover="className='zoom'" onmouseout="className='none'">
+							<div id="player101"><img src="./images/card back.png" width="50" height="75" /></div>
+							<div id="player102"><img src="./images/card back.png" width="50" height="75" /></div>
+							<div class="namebox"><img src="./images/name and bet.png" width="120" height="80" vspace="40"/></div>
+							<div class="name">Mängija</div>
+							<div class="stack" id="stack">$100</div>
+							<div class="bet" id="bet">$0</div>
+							<div class = "roll" id = "role10"></div>
+						</div>
+					</div>
+
+
+					
+					<div><input id = "mang" type="image" src="./images/u_mang.png" width="100" height="50"  onclick="mang()" /></div>					
+					<div><input id = "addmoney"  type="image" src="./images/u_raise.png" width="100" height="50" onclick="addmoney()"  /></div>
+					<div><input id = "call" type="image" src="./images/u_call.png" width="100" height="50" onclick="call()"  /></div>
+					<div><input id = "fold" type="image" src="./images/u_fold.png" width="100" height="50" onclick="fold()"  /></div>
+					<div><input id = "check" type="image" src="./images/u_check.png" width="100" height="50" onclick="check()"  /></div>
+					<div><input id = "to_pot" type="image" src="./images/u_bet.png" width="100" height="50" onclick="to_pot()"  /></div>
+					<!--  
+					<div><input id = "alusta_mangu" type="image" src="./images/u2.png" width="100" height="50"  onclick="alusta_mangu()" /></div>					
+					<div><input id = "segamine"  type="image" src="./images/u2.png" width="100" height="50" onclick="segamine()"  /></div>
+					<div><input id = "mis_kaart_kellele" type="image" src="./images/u2.png" width="100" height="50" onclick="mis_kaart_kellele()"  /></div>
+					<div><input id = "voitja" type="image" src="./images/u2.png" width="100" height="50" onclick="voitja()"  /></div>		
+					<div><input id = "end" type="image" src="./images/u2.png" width="100" height="50" onclick="end()"  /></div>				
+					-->
+					<div class="chatbox" id="chatbox">
+						<div class="chatarea" id="chatarea">
+							<p id="example1">command line# </p>
+						</div>
+						<form>
+							<input class="textbox" type='text' id='sisend3' size="79" maxlength="90"/>
+							<input type='button' onclick="fn_command(document.getElementById('sisend3'))" value='Send'/>
+						</form>
+					</div>
+	
 				</td>
 			</tr>
 		</table>
