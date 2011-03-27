@@ -1,80 +1,30 @@
-body{background-image: url("./images/background.jpg");}
+body{background-image: url("./images/u.png");}
 
-#taust1{
+#taust1{background-image: url("./images/aar1.png");
+height: 1200px;
+width: 320px;
 	margin-top: -10px;
 	margin-left: -10px;
-}
-
-#taust2{
+	}
+#taust2{background-image: url("./images/aar2.png");
+height: 1200px;
+width: 300px;
 	margin-top: -60px;
 	margin-right: -10px;
-}
-
-.pokertable{
-	background-image: url("./images/board.png");
-	background-repeat:no-repeat;
-}
-
-.cardback{
-	margin-top: 60px;
-	width: 50px;
-	height: 75px;
-	background-image: url("./images/card back.png");
-}
-
-.cardbacksmall{
-	margin-top: 60px;
-	width: 34px;
-	height: 50px;
-	background-image: url("./images/card back small.png");
-}
-
-.acard{
-	margin-top: 60px;
-	width: 34px;
-	height: 50px;
-	background-image: url("./images/card back small.png");
-}
-
-.zoom{
-	margin-left: -60px;
-	width: 240px;
-	height: 80px;
-	position: relative;
-	background-image: url("./images/zoomed.png");
-}
-
+	}
 .table{
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: -100px;
 }
 
-.table2{margin-top: 50px;}
-.table20{margin-top: -20px;}
-.table3{margin-top: -50px;}
-.table30{margin-top: -20px;}
-.whitespace1{width: 150px;}
-.whitespace2{width: 80px;}
-
-.pot{
-	margin-top: 60px;
-	margin-left: 50px;
-	width: 120px;
-	height: 70px;
-}
-
-#pot{
-	margin-top: -55px;
-	margin-left: 10px;
-	color:339999;
-	font-size: 2em; 
-	}
 
 .chatbox{
 	background-color: #000000;
 	border: 1px solid;
 	height: 230px;
 	margin-top: 70px;
+	margin-left: 90px;
 	width: 600px;
 	-moz-border-radius: 40px;
 }
@@ -112,6 +62,10 @@ color:#00ff00;
 	margin-top: 15px;
 	margin-left: 30px;
 	}
+.roll{
+	margin-top: -30px;margin-left: 50px;
+	}
+
 
 #player11{margin-top: 60px;}
 #player12{margin-top: -75px;margin-left: 27px;}
@@ -134,9 +88,46 @@ color:#00ff00;
 #player101{margin-top: 60px;}
 #player102{margin-top: -75px;margin-left: 27px;}
 
-#sisend{width: 50px;}
-#sisend2{width: 50px;}
+#player1{margin-top: -550px; margin-left: 110px;}
+#player2{margin-top: -170px; margin-left: 270px;}
+#player3{margin-top: -170px; margin-left: 430px;}
+#player4{margin-top: -170px; margin-left: 590px;}
 
-.roll{
-	margin-top: -65px;margin-left: 80px;
+#player5{margin-top: -50px; margin-left: 0px;}
+#acard0{margin-top: -50px; margin-left: 180px;}
+#acard1{margin-top: -50px; margin-left: 220px;}
+#acard2{margin-top: -50px; margin-left: 260px;}
+#acard3{margin-top: -50px; margin-left: 300px;}
+#acard4{margin-top: -50px; margin-left: 340px;}
+#acard5{margin-top: -50px; margin-left: 380px;}
+#pot2{margin-top: -50px; margin-left: 460px;}
+
+#pot{
+	margin-top: -55px;
+	margin-left: 10px;
+	color:339999;
+	font-size: 2em; 
 	}
+
+#player6{margin-top: -170px; margin-left: 660px;}
+
+#player7{margin-top: 0px; margin-left: 110px;}
+#player8{margin-top: -170px; margin-left: 270px;}
+#player9{margin-top: -170px; margin-left: 430px;}
+#player10{margin-top: -170px; margin-left: 590px;}
+
+
+#mang{margin-top: 70px;margin-left: 30px}
+#addmoney{margin-top: -50px;margin-left: 150px}
+#call{margin-top: -50px;margin-left: 270px}
+#fold{margin-top: -50px;margin-left: 390px}
+#check{margin-top: -50px;margin-left: 510px}
+#to_pot{margin-top: -50px;margin-left: 630px}
+
+#alusta_mangu{margin-top: -130px;margin-left: -600px}
+#segamine{margin-top: -130px;margin-left: -450px}
+#mis_kaart_kellele{margin-top: -130px;margin-left: -300px}
+#voitja{margin-top: -130px;margin-left: -150px}
+#end{margin-top: -130px;margin-left: 0px}
+
+
