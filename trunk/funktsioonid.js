@@ -1,13 +1,12 @@
 var panus = 0;
 var pot = 0;
 var suurim_panus = 0;
-var mangija_raha = 100;
+var mangija_raha = 500;
 var diilercount = 9;
 
-var bot_raha=[100, 100, 100, 100, 100, 100, 100, 100];
+var bot_raha=[500, 500, 500, 500, 500, 500, 500, 500, 500];
 var bot_out=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
-var dont = 0;
 var list3 = [];
 var ring = 1;
 var round=1;
@@ -242,159 +241,174 @@ function to_pot(){
 		}
 		else {
 			var error = document.getElementById("example1");
-			error.appendChild(document.createElement('br'));
 			error.appendChild(document.createTextNode("pole piisavalt raha"));
 			error.appendChild(document.createElement('br'));
+			error.appendChild(document.createTextNode("command line# "));
+
 		}
 	}
 }
 
 function Botkaigud(){
-	Botkaik(0);
-	Botkaik(1);
-	Botkaik(2);
-	Botkaik(3);
-	Botkaik(4);
-	Botkaik(5);
-	Botkaik(6);
-	Botkaik(7);
-	Botkaik(8);
-	//alert(bot_out);
+	switch(ring)
+	{
+	case 0:
+		break;
+	case 1:
+		fn_command("Ring " + (ring) + " - preflop");
+		break;
+	case 2:
+		fn_command("Ring " + (ring) + " - flop");
+		break;
+	case 3:
+		fn_command("Ring " + (ring) + " - turn");
+		break;
+	case 4:
+		fn_command("Ring " + (ring) + " - river");
+		break;
+	default:
+	}
+	for (i=0;i<=8;i++){
+		if (bot_out[i] == 0){
+			Botkaik(i);
+		}
+	}
 	round++;
-	//for (i=0;i<=8;i++){
-	//	if (bot_bet[i] < suurim_panus){
-	//		if (bot_out[i] == 0){
-	//			Botkaik(i);
-	//		}
-	//	}
-	//}
-	suurim_panus = 0;
+	fn_command("Round " + (round));
+		alert(suurim_panus);
+	for (i=0;i<=8;i++){
+							if (i==1) alert(bot_bet[i]);
+		if (bot_bet[i] < suurim_panus){
+			if (bot_out[i] == 0){
+				Botkaik(i);
+			}
+		}
+	}
+	round=1;
+	suurim_panus=0;
+	bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
+;
 }
 
 function Botkaik(nr){
-if (nr==8) alert(bot_out);
-	dorandom=1;
+
+	dorandom = 1;
 	var randomnumber = 1;
 	var nra = nr + 1;
-	if (parseInt(diilercount) == nr){
-		fn_command2("Player" + nra + " is dealer");}
+	if (parseInt(diilercount) == nr)
+		fn_command("Player" + nra + " is dealer");
 	else{
 		if (bot_out[nr] == 1){}
 		else{
-			if ((parseInt(diilercount) == nr-1) || (nr == 0 && diilercount == 9)){
-				if (round == 1){
+			if ((parseInt(diilercount) == nr - 1) || (nr == 0 && diilercount == 9)){
+				if (round < 2 && ring < 2){
 					dorandom = 0;
-					if (SB < bot_raha[nr]-1){
-						randomnumber=SB;
-						bot_bet[nr] = randomnumber;
-						if (suurim_panus<randomnumber){
-							suurim_panus = randomnumber;}
+					if (SB < bot_raha[nr] - 1){
+						randomnumber = SB;
+						if (suurim_panus < randomnumber)
+							suurim_panus = randomnumber;
 					}
-					else{
-						bot_out[nr] = 1;
-						fn_command2("Player" + nra + " foldss");
-					}
+					else
+						fold(nr);
 				}
 			}
-			if ((parseInt(diilercount) == nr-2)||(nr == 0 && diilercount == 8)||(nr == 1 && diilercount == 9)){
-				if (round == 1){
+			if ((parseInt(diilercount) == nr - 2) || (nr == 0 && diilercount == 8) || (nr == 1 && diilercount == 9)){
+				if (round < 2 && ring < 2){
 					dorandom = 0;
-					if (BB < bot_raha[nr]-1){
-						randomnumber=BB;
-						bot_bet[nr] = randomnumber;
-						if (suurim_panus<randomnumber){
-							suurim_panus = randomnumber;}
+					if (BB < bot_raha[nr] - 1){
+						randomnumber = BB;
+						if (suurim_panus < randomnumber)
+							suurim_panus = randomnumber;
 					}
 					else{
-						bot_out[nr] = 1;
-						fn_command2("Player" + nra + " foldsa");
+						fold(nr);
 					}
 				}
 			}
 			
 			if (dorandom == 1){
-				var randomn=Math.floor(Math.random()*3);
+				var randomn = 1//Math.floor(Math.random() * 3);
 				switch(randomn)
 				{
 				case 0:
-					bot_out[nr] = 1;
-					fn_command2("Player" + nra + " folds");
+					fold(nr);
 					break;
 				case 1:
-					randomnumber = 2*BB;
-					if (ring == 2){
-						randomnumber = BB;
-					}
-					if (suurim_panus > randomnumber){
-						randomnumber = suurim_panus;
-					}
+					randomnumber = (2 * BB) - bot_bet[nr];
+					if (ring == 2)
+						randomnumber = (BB) - bot_bet[nr];
+					if (suurim_panus > randomnumber)
+						randomnumber = (suurim_panus) - bot_bet[nr];
+					if (suurim_panus < randomnumber)
+						suurim_panus = randomnumber;
 					break;
 				case 2:
 					if (ring <= 2){
-						if (suurim_panus < 4*BB){
-							randomnumber = suurim_panus+BB;
+						if (suurim_panus < 4 * BB){
+							randomnumber = (suurim_panus+BB) - bot_bet[nr];
 							suurim_panus += BB;
 						}
-						else {
-							randomnumber = suurim_panus;
-						}
+						else 
+							randomnumber = (suurim_panus) - bot_bet[nr];
 					}
 					else{
-						if (suurim_panus < 8*BB){
-							randomnumber = suurim_panus+BB;
-							suurim_panus += BB;
+						if (suurim_panus < 8 * BB){
+							if (ring < 3){
+								randomnumber = (suurim_panus + BB) - bot_bet[nr];
+								suurim_panus += BB;
+							}
+							else
+								randomnumber = (suurim_panus + 2 * BB) - bot_bet[nr];
+								suurim_panus += 2 * BB;
 						}
-						else {
-							randomnumber = suurim_panus;
-						}
+						else
+							randomnumber = (suurim_panus) - bot_bet[nr];
 					}
 					break;
 				default:
 				}
 			}
-				
-			if (randomnumber <= parseInt(bot_raha[nr]) && bot_out[nr]==0){
-				//POT
-				pot=parseInt(pot)+parseInt(randomnumber);
-				document.getElementById("pot").innerHTML="$"+pot;
-				
-				//BOT_RAHA
-				bot_raha[nr]=parseInt(bot_raha[nr])-parseInt(randomnumber);
-				document.getElementById("stack" + nra).innerHTML="$"+bot_raha[nr];
-				
-				//CMD LINE
-				fn_command2("Player" + nra + " betted $" + randomnumber);
-				dont = 1;
-				bot_bet[nr] = randomnumber;
-			}
+			
+			if (randomnumber <= bot_raha[nr] && bot_out[nr]==0)
+				bett(nr, nra, randomnumber);
 			else {
-				if (bot_out[nr] == 0){
-					bot_out[nr] = 1;
-					fn_command2("Player" + nra + " folds (no money)");
-					bot_bet[nr] = randomnumber;
-				}
+				if (bot_out[nr] == 0)
+					fold(nr);
 			}
 		}
 	}
 }
 
+function bett(nr, nra, randomnumber){
+	//POT
+	pot=parseInt(pot) + randomnumber;
+	document.getElementById("pot").innerHTML="$" + pot;
+	
+	//BOT_RAHA
+	bot_raha[nr] = bot_raha[nr] - randomnumber;
+	document.getElementById("stack" + nra).innerHTML="$" + bot_raha[nr];
+	
+	//CMD LINE
+	fn_command("Player" + nra + " betted $" + randomnumber);
+	bot_bet[nr] = randomnumber;
+}
+
+function fold(nr){
+	bot_out[nr] = 1;
+	fn_command("Player" + (nr + 1 ) + " folds");
+}
+
 
 function fn_command(elem){
 	var newText = document.createTextNode(elem.value);
+	if (newText = "undefined")
+		var newText = document.createTextNode(elem);
 	var para = document.getElementById("example1");
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
 	para.appendChild(document.createTextNode("command line# "));
 }
 
-
-function fn_command2(elem){
-	var newText = document.createTextNode(elem);
-	var para = document.getElementById("example1");
-	para.appendChild(newText);
-	para.appendChild(document.createElement('br'));
-	para.appendChild(document.createTextNode("command line# "));
-}
 
 function voitja(){
 	mangija_raha+=pot;
