@@ -3,7 +3,7 @@ function eelLaadimine(){
 		$(".nupp").hide();
 		  $("#mang").click(function(){
 		    $("#mang").hide(1000);
-		    $("#chatbox").css("margin-top", "-150px"); 
+		    $("#chatbox").css("margin-top", "-80px"); 
 		    $(".nupp").show(1000);
 		  });
 		});
