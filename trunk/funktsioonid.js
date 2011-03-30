@@ -95,11 +95,6 @@ function alusta_mangu() {
 	alusta.appendChild(document.createTextNode("command line# "));
 }
 
-function addmoney(){
-	panus++
-	document.getElementById("bet").innerHTML="$"+panus;
-}
-
 function segamine(){
 
 	list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
@@ -286,7 +281,7 @@ function Botkaigud(){
 		}
 	}
 	round=1;
-	suurim_panus=0;
+	
 	bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 ;
 }
@@ -328,7 +323,7 @@ function Botkaik(nr){
 			}
 			
 			if (dorandom == 1){
-				var randomn = 1//Math.floor(Math.random() * 3);
+				var randomn = (Math.floor(Math.random() * 2))+1;
 				switch(randomn)
 				{
 				case 0:
@@ -429,13 +424,44 @@ function mang(){
 }
 
 function fold(){
-	
+	var fold2 = document.getElementById("example1");
+	fold2.appendChild(document.createTextNode("Player folds"));
+	fold2.appendChild(document.createElement('br'));
+	fold2.appendChild(document.createTextNode("command line# "));
+	to_pot();
+	to_pot();
 }
 
 function check(){
-	
+	if (suurim_panus == panus){
+		to_pot();
+	}
+	else {
+		var puudu = document.getElementById("example1");
+		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
+		puudu.appendChild(document.createElement('br'));
+		puudu.appendChild(document.createTextNode("command line# "));
+	}
 }
 
+
 function raise(){
+	panus=suurim_panus;
+	panus+=BB;
+	document.getElementById("bet").innerHTML="$"+panus;
+	to_pot();
+}
+
+function call(){
+	if (suurim_panus - panus < mangija_raha){
+		panus = suurim_panus - panus;
+		to_pot();
+	}
+	else {
+		var puudu = document.getElementById("example1");
+		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
+		puudu.appendChild(document.createElement('br'));
+		puudu.appendChild(document.createTextNode("command line# "));
+	}
 	
 }
