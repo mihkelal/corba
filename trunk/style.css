@@ -18,15 +18,18 @@ width: 300px;
 	margin-top: -100px;
 }
 
-
-.chatbox{
+#corba{
+	margin-left: -150px;
+	margin-top: -50px;
+	}
+#chatbox{
+	
 	background-color: #000000;
 	border: 1px solid;
 	height: 230px;
-	margin-top: 70px;
-	margin-left: 90px;
-	width: 600px;
-	-moz-border-radius: 40px;
+	margin-top: -200px;
+	margin-left: -20px;
+	width: 620px;
 }
 
 .chatarea{
@@ -117,17 +120,11 @@ color:#00ff00;
 #player10{margin-top: -170px; margin-left: 590px;}
 
 
-#mang{margin-top: 70px;margin-left: 30px}
-#addmoney{margin-top: -50px;margin-left: 150px}
-#call{margin-top: -50px;margin-left: 270px}
-#fold{margin-top: -50px;margin-left: 390px}
-#check{margin-top: -50px;margin-left: 510px}
-#to_pot{margin-top: -50px;margin-left: 630px}
+#mang{margin-top: 100px;margin-left: 800px}
+#addmoney{margin-top: 150px;margin-left: 600px}
+#call{margin-top: -50px;margin-left: 700px}
+#fold{margin-top: -50px;margin-left: 800px}
+#check{margin-top: -50px;margin-left: 900px}
+#to_pot{margin-top: -50px;margin-left: 1000px}
 
-#alusta_mangu{margin-top: -130px;margin-left: -600px}
-#segamine{margin-top: -130px;margin-left: -450px}
-#mis_kaart_kellele{margin-top: -130px;margin-left: -300px}
-#voitja{margin-top: -130px;margin-left: -150px}
-#end{margin-top: -130px;margin-left: 0px}
-
-
+#end{margin-top: -50px;margin-left: 800px}

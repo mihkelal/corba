@@ -4,12 +4,15 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<script type="text/javascript" src="funktsioonid.js"></script>
 		<script type="text/javascript" src="compare_cards.js"></script>
-	<div id = "taust1" style="float: left "></div>
+		<script type="text/javascript" src="jQuery.js"></script>
+		<script type="text/javascript" src="jquery-1.5.1.js"></script>
+	<!-- <div id = "taust1" style="float: left "></div>
 	<div id = "taust2" style="float: right "></div>
+	 -->
 	</head>
 	<body>	
 
-	<div><img src="./images/pokker.png" width="1200" height="300"/></div>
+	<div id = "corba" ><img src="./images/pokker.png" width="1200" height="300"/></div>
 	
 		<table class="table">			
 			<tr>
@@ -139,34 +142,36 @@
 							<div class = "roll" id = "role10"></div>
 						</div>
 					</div>
-
-
-					
-					<div><input id = "mang" type="image" src="./images/u_mang.png" width="100" height="50"  onclick="mang()" /></div>					
-					<div><input id = "addmoney"  type="image" src="./images/u_raise.png" width="100" height="50" onclick="addmoney()"  /></div>
-					<div><input id = "call" type="image" src="./images/u_call.png" width="100" height="50" onclick="call()"  /></div>
-					<div><input id = "fold" type="image" src="./images/u_fold.png" width="100" height="50" onclick="fold()"  /></div>
-					<div><input id = "check" type="image" src="./images/u_check.png" width="100" height="50" onclick="check()"  /></div>
-					<div><input id = "to_pot" type="image" src="./images/u_bet.png" width="100" height="50" onclick="to_pot()"  /></div>
-					<!--  
-					<div><input id = "alusta_mangu" type="image" src="./images/u2.png" width="100" height="50"  onclick="alusta_mangu()" /></div>					
-					<div><input id = "segamine"  type="image" src="./images/u2.png" width="100" height="50" onclick="segamine()"  /></div>
-					<div><input id = "mis_kaart_kellele" type="image" src="./images/u2.png" width="100" height="50" onclick="mis_kaart_kellele()"  /></div>
-					<div><input id = "voitja" type="image" src="./images/u2.png" width="100" height="50" onclick="voitja()"  /></div>		
-					<div><input id = "end" type="image" src="./images/u2.png" width="100" height="50" onclick="end()"  /></div>				
-					-->
-					<div class="chatbox" id="chatbox">
-						<div class="chatarea" id="chatarea">
-							<p id="example1">command line# </p>
-						</div>
-						<form>
-							<input class="textbox" type='text' id='sisend3' size="79" maxlength="90"/>
-							<input type='button' onclick="fn_command(document.getElementById('sisend3'))" value='Send'/>
-						</form>
-					</div>
-	
 				</td>
 			</tr>
 		</table>
+		
+		
+		<div><input id = "mang" type="image" src="./images/u_mang.png" width="300" height="150"  onclick="mang()" /></div>					
+		<div><input class = "nupp" id = "addmoney"  type="image" src="./images/u_raise.png" width="100" height="50" onclick="addmoney()"  /></div>
+		<div><input class = "nupp" id = "call" type="image" src="./images/u_call.png" width="100" height="50" onclick="call()"  /></div>
+		<div><input class = "nupp" id = "fold" type="image" src="./images/u_fold.png" width="100" height="50" onclick="fold()"  /></div>
+		<div><input class = "nupp" id = "check" type="image" src="./images/u_check.png" width="100" height="50" onclick="check()"  /></div>
+		<div><input class = "nupp" id = "to_pot" type="image" src="./images/u_bet.png" width="100" height="50" onclick="to_pot()"  /></div>
+		
+		
+		
+		<div id="chatbox" id="chatbox">
+			<div class="chatarea" id="chatarea">
+				<p id="example1">command line# </p>
+			</div>
+			<form>
+				<input class="textbox" type='text' id='sisend3' size="79" maxlength="90"/>
+				<input type='button' onclick="fn_command(document.getElementById('sisend3'))" value='Send'/>
+			</form>
+		</div>
 	</body>
+	<div><input class = "nupp" id = "end" type="image" src="./images/u_bet.png" width="100" height="50" onclick="end"  /></div>
+		
+	
+<script type="text/javascript">
+	eelLaadimine();
+
+</script>
+
 </html>
