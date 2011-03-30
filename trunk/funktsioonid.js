@@ -401,9 +401,13 @@ function fold(nr){
 
 
 function fn_command(elem){
-	var newText = document.createTextNode(elem.value);
-	if (newText = "undefined")
-		var newText = document.createTextNode(elem);
+	var newText; 
+	if (elem != "[object HTMLInputElement]"){
+		newText = document.createTextNode(elem);
+	}		
+	else {
+		newText = document.createTextNode(elem.value);	
+	}
 	var para = document.getElementById("example1");
 	para.appendChild(newText);
 	para.appendChild(document.createElement('br'));
@@ -422,4 +426,16 @@ function mang(){
 	alusta_mangu();
 	segamine();
 	to_pot();
+}
+
+function fold(){
+	
+}
+
+function check(){
+	
+}
+
+function raise(){
+	
 }
