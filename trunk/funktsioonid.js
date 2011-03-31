@@ -9,7 +9,7 @@ var bot_out=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var list3 = [];
 var list4 = [];
-var ring = 1;
+var ring = 0;
 var round=1;
 var dorandom=1;
 
@@ -551,7 +551,10 @@ function to_pot(){
 			document.getElementById("bet").innerHTML="$"+panus;
 			
 			Botkaigud();
-			if (ring == 1){
+			if (ring == 0){
+			ring++
+			}
+			else if (ring == 1){
 				document.getElementById("acard1").innerHTML="<div class='acard' ><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
 				document.getElementById("acard2").innerHTML="<div class='acard' ><img src='./cards/"+ list3[22] +".png' width='34' height='50'/></div>";
 				document.getElementById("acard3").innerHTML="<div class='acard' ><img src='./cards/"+ list3[23] +".png' width='34' height='50'/></div>";
@@ -758,6 +761,7 @@ function fold(){
 	fold2.appendChild(document.createTextNode("command line# "));
 	to_pot();
 	to_pot();
+	to_pot();
 }
 
 function check(){
@@ -828,10 +832,13 @@ function ok(){
 	document.getElementById("acard5").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
 	ok_out();
 
-	ring = 1;
+	ring = 0;
 	suurim_panus = 0;
 	compare();
 	mang();
 	
 }
 
+function end(){
+	ok();
+}
