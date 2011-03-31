@@ -4,7 +4,7 @@ var suurim_panus = 0;
 var mangija_raha = 500;
 var diilercount = 9;
 
-var bot_raha=[500, 500, 500, 500, 500, 500, 500, 500, 500];
+var bot_raha=[5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000];
 var bot_out=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var bot_bet=[0, 0, 0, 0, 0, 0, 0, 0, 0];
 var list3 = [];
@@ -97,11 +97,11 @@ function alusta_mangu() {
 
 function segamine(){
 
-	//list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
-	list1 = ["c2","c3","c4","c5","c6","c7","c8","c9","c10","ca","cj","ck","cq",
-	         "d2","d3","d4","d5","d6","d7","d8","d9","d10","da","dj","dk","dq",
-	         "h2","h3","h4","h5","h6","h7","h8","h9","h10","ha","hj","hk","hq",
-	         "s2","s3","s4","s5","s6","s7","s8","s9","s10","sa","sj","sk","sq"];
+	list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
+	//list1 = ["c2","c3","c4","c5","c6","c7","c8","c9","c10","ca","cj","ck","cq",
+	//         "d2","d3","d4","d5","d6","d7","d8","d9","d10","da","dj","dk","dq",
+	 //        "h2","h3","h4","h5","h6","h7","h8","h9","h10","ha","hj","hk","hq",
+	  //       "s2","s3","s4","s5","s6","s7","s8","s9","s10","sa","sj","sk","sq"];
 	list2 = [];
 
 	var kaardidd=52;
@@ -237,6 +237,8 @@ function to_pot(){
 				ring+=1;
 				mangija_bet = 0;
 				mis_kaart_kellele();
+				uus_ring();
+				
 			}
 		}
 		else {
@@ -414,13 +416,6 @@ function fn_command(elem){
 }
 
 
-function voitja(){
-	mangija_raha+=pot;
-	document.getElementById("stack").innerHTML="$"+mangija_raha;
-	pot=0;
-	document.getElementById("pot").innerHTML="$"+pot;	
-}
-
 function mang(){
 	alusta_mangu();
 	segamine();
@@ -469,3 +464,45 @@ function call(){
 	}
 	
 }
+
+function ok(){
+
+	document.getElementById("player11").innerHTML=<div id="player11"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player12").innerHTML=<div id="player12"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player21").innerHTML=<div id="player21"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player22").innerHTML=<div id="player22"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player31").innerHTML=<div id="player31"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player32").innerHTML=<div id="player32"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player41").innerHTML=<div id="player41"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player42").innerHTML=<div id="player42"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player51").innerHTML=<div id="player51"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player52").innerHTML=<div id="player52"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player61").innerHTML=<div id="player61"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player62").innerHTML=<div id="player62"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player71").innerHTML=<div id="player71"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player72").innerHTML=<div id="player72"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player81").innerHTML=<div id="player81"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player82").innerHTML=<div id="player82"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player91").innerHTML=<div id="player91"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player92").innerHTML=<div id="player92"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player101").innerHTML=<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
+
+	document.getElementById("acard1").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+
+	document.getElementById("acard2").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+
+	document.getElementById("acard3").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+
+	document.getElementById("acard4").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+
+	document.getElementById("acard5").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+	ok_out();
+
+	ring = 1;
+	suurim_panus = 0;
+	compare();
+	mang();
+	
+}
+
