@@ -1,7 +1,7 @@
 var panus = 0;
 var pot = 0;
 var suurim_panus = 0;
-var mangija_raha = 500;
+var mangija_raha = 5000;
 var diilercount = 9;
 
 var bot_raha=[5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000];
@@ -552,7 +552,7 @@ function to_pot(){
 			
 			Botkaigud();
 			if (ring == 0){
-			ring++
+			ring++			
 			}
 			else if (ring == 1){
 				document.getElementById("acard1").innerHTML="<div class='acard' ><img src='./cards/"+ list3[21] +".png' width='34' height='50'/></div>";
@@ -751,6 +751,9 @@ function fn_command(elem){
 function mang(){
 	alusta_mangu();
 	segamine();
+	document.getElementById("player101").innerHTML="<div id='player101'><img src='./cards/"+ list3[18] +".png' width='50' height='75'/></div>";
+	document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[19] +".png' width='50' height='75'/></div>";
+	ring=0;
 	to_pot();
 }
 
@@ -841,4 +844,8 @@ function ok(){
 
 function end(){
 	ok();
+	
+	document.getElementById("player101").innerHTML=<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>;
+	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
+	end_pressed();
 }
