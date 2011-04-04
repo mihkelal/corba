@@ -30,3 +30,20 @@ function ok_out(){
 		});
 }
 
+
+function end_pressed(){
+	$(document).ready(function(){
+		
+		$("#mang").show(1000);
+		$("#chatbox").css("margin-top", "-180px");
+		$(".nupp").hide();
+		$("#ok").hide();
+		  $("#mang").click(function(){
+		    $("#mang").hide(1000);
+		    $("#chatbox").css("margin-top", "-80px"); 
+		    $(".nupp").show(1000);
+
+
+		  });
+		});
+}
