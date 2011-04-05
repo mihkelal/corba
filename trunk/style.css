@@ -1,17 +1,19 @@
 body{background-image: url("./images/u.png");}
 
 #taust1{background-image: url("./images/aar1.png");
-height: 1200px;
-width: 320px;
+	height: 1200px;
+	width: 320px;
 	margin-top: -10px;
 	margin-left: -10px;
-	}
+}
+
 #taust2{background-image: url("./images/aar2.png");
-height: 1200px;
-width: 300px;
+	height: 1200px;
+	width: 300px;
 	margin-top: -60px;
 	margin-right: -10px;
-	}
+}
+
 .table{
 	margin-left: auto;
 	margin-right: auto;
@@ -21,9 +23,9 @@ width: 300px;
 #corba{
 	margin-left: -150px;
 	margin-top: -50px;
-	}
+}
+
 #chatbox{
-	
 	background-color: #000000;
 	border: 1px solid;
 	height: 230px;
@@ -48,26 +50,26 @@ color:#00ff00;
 
 .namebox{
 	margin-top: -75px;
-	
-	}
-	
-.name	{
+}
+
+.name{
 	margin-left: 20px;
 	margin-top: -118px;
 }
 
-.stack {
+.stack{
 	margin-left: 20px;
 	margin-top: -5px;
 }
 
-.bet {
+.bet{
 	margin-top: 15px;
 	margin-left: 30px;
-	}
+}
+
 .roll{
 	margin-top: -30px;margin-left: 50px;
-	}
+}
 
 
 #player11{margin-top: 60px;}
@@ -91,12 +93,6 @@ color:#00ff00;
 #player101{margin-top: 60px;}
 #player102{margin-top: -75px;margin-left: 27px;}
 
-#player1{margin-top: -550px; margin-left: 110px;}
-#player2{margin-top: -170px; margin-left: 270px;}
-#player3{margin-top: -170px; margin-left: 430px;}
-#player4{margin-top: -170px; margin-left: 590px;}
-
-#player5{margin-top: -50px; margin-left: 0px;}
 #acard0{margin-top: -50px; margin-left: 180px;}
 #acard1{margin-top: -50px; margin-left: 220px;}
 #acard2{margin-top: -50px; margin-left: 260px;}
@@ -108,17 +104,20 @@ color:#00ff00;
 #pot{
 	margin-top: -55px;
 	margin-left: 10px;
-	color:339999;
+	color: 339999;
 	font-size: 2em; 
-	}
+}
 
+#player1{margin-top: -550px; margin-left: 110px;}
+#player2{margin-top: -170px; margin-left: 270px;}
+#player3{margin-top: -170px; margin-left: 430px;}
+#player4{margin-top: -170px; margin-left: 590px;}
+#player5{margin-top: -50px; margin-left: 0px;}
 #player6{margin-top: -170px; margin-left: 660px;}
-
 #player7{margin-top: 0px; margin-left: 110px;}
 #player8{margin-top: -170px; margin-left: 270px;}
 #player9{margin-top: -170px; margin-left: 430px;}
 #player10{margin-top: -170px; margin-left: 590px;}
-
 
 #mang{margin-top: 100px;margin-left: 800px}
 #addmoney{margin-top: 80px;margin-left: 600px}
