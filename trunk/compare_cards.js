@@ -1,28 +1,26 @@
 function compare(){
-		
 	var winrar = 0;
-	for (i=0; i<10; i++){
+	for (i = 0; i < 10; i++){
 		if (kombmax[i] > winrar)
-			winrar = i + 1;}
-	alert("A winrar is player" + winrar + "!");
+			winrar = i + 1;
+		}
+	alert("Player" + winrar + " wins!");
 	
 	voitja(winrar);
-	
-	
 }
 
 function voitja(winrar){
 	if (winrar == 10){
-		mangija_raha+=pot;
-	document.getElementById("stack").innerHTML="$"+mangija_raha;
-	pot=0;
-	document.getElementById("pot").innerHTML="$"+pot;	
+		mangija_raha += pot;
+		document.getElementById("stack").innerHTML = "$" + mangija_raha;
+		pot = 0;
+		document.getElementById("pot").innerHTML = "$" + pot;
 	}
 	else {
-	bot_raha[winrar]+=pot;
-	document.getElementById("stack"+winrar).innerHTML="$"+bot_raha[winrar];
-	pot=0;
-	document.getElementById("pot").innerHTML="$"+pot;	
+	bot_raha[winrar] += pot;
+	document.getElementById("stack" + winrar).innerHTML = "$" + bot_raha[winrar];
+	pot = 0;
+	document.getElementById("pot").innerHTML = "$" + pot;
 
 	}
 	
@@ -50,7 +48,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb1[18] = gaga.createHand([list4[1], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb1[19] = gaga.createHand([list4[1], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb1[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[0]=(Math.max.apply(Math, komb1));
+	kombmax[0] = (Math.max.apply(Math, komb1));
 	//alert(kombmax[0]);
 	
 	komb2[0] = gaga.createHand([list4[2], list4[3], list4[21], list4[22], list4[23]]).identify().rank;
@@ -74,7 +72,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb2[18] = gaga.createHand([list4[2], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb2[19] = gaga.createHand([list4[2], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb2[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[1]=(Math.max.apply(Math, komb2));
+	kombmax[1] = (Math.max.apply(Math, komb2));
 	
 	
 	komb3[0] = gaga.createHand([list4[4], list4[5], list4[21], list4[22], list4[23]]).identify().rank;
@@ -98,7 +96,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb3[18] = gaga.createHand([list4[5], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb3[19] = gaga.createHand([list4[5], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb3[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[2]=(Math.max.apply(Math, komb3));
+	kombmax[2] = (Math.max.apply(Math, komb3));
 	
 	
 	komb4[0] = gaga.createHand([list4[6], list4[7], list4[21], list4[22], list4[23]]).identify().rank;
@@ -122,7 +120,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb4[18] = gaga.createHand([list4[7], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb4[19] = gaga.createHand([list4[7], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb4[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[3]=(Math.max.apply(Math, komb4));
+	kombmax[3] = (Math.max.apply(Math, komb4));
 	
 	
 	komb5[0] = gaga.createHand([list4[8], list4[9], list4[21], list4[22], list4[23]]).identify().rank;
@@ -146,7 +144,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb5[18] = gaga.createHand([list4[9], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb5[19] = gaga.createHand([list4[9], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb5[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[4]=(Math.max.apply(Math, komb5));
+	kombmax[4] = (Math.max.apply(Math, komb5));
 	
 	
 	komb6[0] = gaga.createHand([list4[10], list4[11], list4[21], list4[22], list4[23]]).identify().rank;
@@ -170,7 +168,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb6[18] = gaga.createHand([list4[11], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb6[19] = gaga.createHand([list4[11], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb6[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[5]=(Math.max.apply(Math, komb6));
+	kombmax[5] = (Math.max.apply(Math, komb6));
 	
 	
 	komb7[0] = gaga.createHand([list4[12], list4[13], list4[21], list4[22], list4[23]]).identify().rank;
@@ -194,7 +192,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb7[18] = gaga.createHand([list4[13], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb7[19] = gaga.createHand([list4[13], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb7[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[6]=(Math.max.apply(Math, komb7));
+	kombmax[6] = (Math.max.apply(Math, komb7));
 	
 	
 	komb8[0] = gaga.createHand([list4[14], list4[15], list4[21], list4[22], list4[23]]).identify().rank;
@@ -218,7 +216,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb8[18] = gaga.createHand([list4[15], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb8[19] = gaga.createHand([list4[15], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb8[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[7]=(Math.max.apply(Math, komb8));
+	kombmax[7] = (Math.max.apply(Math, komb8));
 	
 	
 	komb9[0] = gaga.createHand([list4[16], list4[17], list4[21], list4[22], list4[23]]).identify().rank;
@@ -242,7 +240,7 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb9[18] = gaga.createHand([list4[17], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb9[19] = gaga.createHand([list4[17], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb9[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[8]=(Math.max.apply(Math, komb9));
+	kombmax[8] = (Math.max.apply(Math, komb9));
 	
 	
 	komb10[0] = gaga.createHand([list4[18], list4[19], list4[21], list4[22], list4[23]]).identify().rank;
@@ -266,6 +264,6 @@ komb1[0] = gaga.createHand([list4[0], list4[1], list4[21], list4[22], list4[23]]
 	komb10[18] = gaga.createHand([list4[19], list4[21], list4[23], list4[24], list4[25]]).identify().rank;
 	komb10[19] = gaga.createHand([list4[19], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
 	komb10[20] = gaga.createHand([list4[21], list4[22], list4[23], list4[24], list4[25]]).identify().rank;
-	kombmax[9]=(Math.max.apply(Math, komb10));
+	kombmax[9] = (Math.max.apply(Math, komb10));
 	
 }
