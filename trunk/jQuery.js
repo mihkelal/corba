@@ -1,17 +1,13 @@
 function eelLaadimine(){
 	$(document).ready(function(){
-		
-		
 		$(".nupp").hide();
 		$("#ok").hide();
-		  $("#mang").click(function(){
-		    $("#mang").hide(1000);
-		    $("#chatbox").css("margin-top", "-80px"); 
-		    $(".nupp").show(1000);
-
-
-		  });
+		$("#mang").click(function(){
+			$("#mang").hide(1000);
+			$("#chatbox").css("margin-top", "-80px"); 
+			$(".nupp").show(1000);
 		});
+	});
 }
 
 function uus_ring(){
@@ -19,7 +15,7 @@ function uus_ring(){
 		$(".nupp").hide();
 		$("#ok").show(1000);
 		$("#chatbox").css("margin-top", "-200px");
-		});
+	});
 }
 
 function ok_out(){
@@ -27,23 +23,20 @@ function ok_out(){
 		$(".nupp").show(1000);
 		$("#ok").hide();
 		 $("#chatbox").css("margin-top", "-80px"); 
-		});
+	});
 }
 
 
 function end_pressed(){
 	$(document).ready(function(){
-		
 		$("#mang").show(1000);
 		$("#chatbox").css("margin-top", "-180px");
 		$(".nupp").hide();
 		$("#ok").hide();
-		  $("#mang").click(function(){
-		    $("#mang").hide(1000);
-		    $("#chatbox").css("margin-top", "-80px"); 
-		    $(".nupp").show(1000);
-
-
-		  });
+		$("#mang").click(function(){
+			$("#mang").hide(1000);
+			$("#chatbox").css("margin-top", "-80px"); 
+			$(".nupp").show(1000);
 		});
+	});
 }
