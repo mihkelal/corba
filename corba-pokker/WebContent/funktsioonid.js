@@ -28,7 +28,7 @@ var komb9 = [];
 var komb10 = [];
 var kombmax = [];
 
-var Dealer = o;
+var Dealer = 0;
 //BUGGED IF DECLARED BELOW THIS LINE
 
 
@@ -602,4 +602,52 @@ function end(){
 	document.getElementById("player101").innerHTML=<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>;
 	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
 	end_pressed();
+}
+
+
+function uuendaInfo() {
+    var req = new XMLHttpRequest();
+    // kuna brauserid niikuinii nõuavad, et url, mille poole pöördutakse 
+    // on samas domeenis, kui see lehekülg, mis päringu teeb,
+    // siis kasutatakse tavaliselt suhteline url
+    var url = "shuffle?action=muuda"; // oletame, et selle url-i taga on mingit servlet
+    
+    req.open("GET", url); 
+ 
+    // kõigepealt anna teada, mida teha, kui request'i seisund muutub
+    req.onreadystatechange = function() { 
+         // kui request jõudis lõpule ja vigu ei olnud
+        if (req.readyState === 4 && req.status === 200) {
+        // kontrollin, et saadeti tõepoolest tekst
+        if (req.getResponseHeader("Content-Type").match(/^text/)) {
+             document.getElementById("info").textContent = req.responseText;
+             document.getElementById("pot").innerHTML="10000";
+        }
+        else {
+            alert("vastus polnud tekst");
+        }
+    }
+ };
+ 
+ // ... ja alles siis saada request teele
+ req.send(null);    
+}
+
+function uuendaInfo2(muutuja) {
+    var req = new XMLHttpRequest();
+    var url = "shuffle?action=uuenda"; 
+    req.open("GET", url); 
+    req.onreadystatechange = function() { 
+        if (req.readyState === 4 && req.status === 200) {
+        if (req.getResponseHeader("Content-Type").match(/^text/)) {
+             document.getElementById("info2").textContent = req.responseText;
+             alert(req.responseText);
+             document.getElementById("pot").innerHTML= ""+req.responseText;
+        }
+    }
+ };
+ 
+ 
+ // ... ja alles siis saada request teele
+ req.send(null);    
 }
