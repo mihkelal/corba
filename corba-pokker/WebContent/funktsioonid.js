@@ -610,7 +610,7 @@ function uuendaInfo() {
     // kuna brauserid niikuinii nõuavad, et url, mille poole pöördutakse 
     // on samas domeenis, kui see lehekülg, mis päringu teeb,
     // siis kasutatakse tavaliselt suhteline url
-    var url = "shuffle?action=muuda"; // oletame, et selle url-i taga on mingit servlet
+    var url = "main?action=muuda"; // oletame, et selle url-i taga on mingit servlet
     
     req.open("GET", url); 
  
@@ -633,16 +633,36 @@ function uuendaInfo() {
  req.send(null);    
 }
 
-function uuendaInfo2(muutuja) {
+function uuendaInfo2() {
     var req = new XMLHttpRequest();
-    var url = "shuffle?action=uuenda"; 
+    var url = "main?action=uuenda"; 
     req.open("GET", url); 
     req.onreadystatechange = function() { 
         if (req.readyState === 4 && req.status === 200) {
         if (req.getResponseHeader("Content-Type").match(/^text/)) {
              document.getElementById("info2").textContent = req.responseText;
-             alert(req.responseText);
              document.getElementById("pot").innerHTML= ""+req.responseText;
+        }
+    }
+ };
+ 
+ 
+ // ... ja alles siis saada request teele
+ req.send(null);    
+}
+
+
+
+
+function uuendaInfo3() {
+    var req = new XMLHttpRequest();
+    var url = "main?action=sega"; 
+    req.open("GET", url); 
+    req.onreadystatechange = function() { 
+        if (req.readyState === 4 && req.status === 200) {
+        if (req.getResponseHeader("Content-Type").match(/^text/)) {
+             document.getElementById("info2").textContent = req.responseText;
+             document.getElementById("pot").innerHTML= "midagi";
         }
     }
  };
