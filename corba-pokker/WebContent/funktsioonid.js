@@ -671,3 +671,22 @@ function uuendaInfo3() {
  // ... ja alles siis saada request teele
  req.send(null);    
 }
+
+
+function uuendaInfo4() {
+    var req = new XMLHttpRequest();
+    var url = "main?action=bet"; 
+    req.open("GET", url); 
+    req.onreadystatechange = function() { 
+        if (req.readyState === 4 && req.status === 200) {
+        if (req.getResponseHeader("Content-Type").match(/^text/)) {
+             document.getElementById("info4").textContent = req.responseText;
+             document.getElementById("pot").innerHTML= "funkab";
+        }
+    }
+ };
+ 
+ 
+ // ... ja alles siis saada request teele
+ req.send(null);    
+}
