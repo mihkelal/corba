@@ -22,6 +22,14 @@ public class database extends main{
 	static int randomnumber = 0;
 	static int nra;
 	
+	static int mangija_raha = 5000;
+	
+	public static int getMangija_raha() {
+		return mangija_raha;
+	}
+	public static void setMangija_raha(int mangija_raha) {
+		database.mangija_raha = mangija_raha;
+	}
 	public static int getPanus() {
 		return panus;
 	}
