@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Random;
 
 
-public class shuffle extends main { 
+public class shuffle { 
 	
 	static ArrayList arrayList2 = new ArrayList();
 	 

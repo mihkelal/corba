@@ -1,6 +1,8 @@
 package engine;
 
 import java.io.*; 
+import java.util.Enumeration;
+
 import javax.servlet.*; 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*; 
@@ -8,6 +10,30 @@ import javax.servlet.http.*;
 
 @WebServlet("/main")
 public class main extends HttpServlet { 
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		PrintWriter out = resp.getWriter();
+		resp.setContentType("text/html");
+		String action = req.getParameter("action");
+		if (action != null && action.equals("database_setMangija_raha")) {
+			System.out.println("RAHA="+req.getAttribute("raha2"));
+			teebmidagi(req);
+			database.setMangija_raha(Integer.parseInt(req.getParameter("raha")));
+		}
+		
+	}
+	
+	public void teebmidagi(HttpServletRequest req){
+		Enumeration<String> names = req.getParameterNames();
+		while(names.hasMoreElements()){
+			String name = names.nextElement();
+			System.out.println(name + "=" + req.getParameter(name));
+		}
+	}
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws IOException, ServletException { 
@@ -40,34 +66,38 @@ public class main extends HttpServlet {
 			out.println(database.getPot());
 		}
 		if (action != null && action.equals("database_getPanus")) {
-			out.println(database.getPot());
+			out.println(database.getPanus());
 		}
 		if (action != null && action.equals("database_getSuurim_panus")) {
-			out.println(database.getPot());
+			out.println(database.getSuurim_panus());
 		}
 		if (action != null && action.equals("database_getDiilercount")) {
-			out.println(database.getPot());
+			out.println(database.getDiilercount());
 		}
 		if (action != null && action.equals("database_getBot_raha")) {
-			out.println(database.getPot());
+			out.println(database.getBot_raha());
 		}
 		if (action != null && action.equals("database_getBot_out")) {
-			out.println(database.getPot());
+			out.println(database.getBot_out());
 		}
 		if (action != null && action.equals("database_getBot_bet")) {
-			out.println(database.getPot());
+			out.println(database.getBot_bet());
 		}
 		if (action != null && action.equals("database_getRing")) {
-			out.println(database.getPot());
+			out.println(database.getRing());
 		}
 		if (action != null && action.equals("database_getRound")) {
-			out.println(database.getPot());
+			out.println(database.getRound());
 		}
 		if (action != null && action.equals("database_getSB")) {
-			out.println(database.getPot());
+			out.println(database.getSB());
 		}
 		if (action != null && action.equals("database_getBB")) {
-			out.println(database.getPot());
-		}		
+			out.println(database.getBB());
+		}	
+		if (action != null && action.equals("database_getMangija_raha")) {
+			out.println(database.getMangija_raha());
+		}
+
 	} 	
 }

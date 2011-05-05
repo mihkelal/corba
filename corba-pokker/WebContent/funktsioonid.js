@@ -298,7 +298,9 @@ function to_pot(){
 	if (ring !=4) {
 		if (parseInt(panus) <= parseInt(mangija_raha)){
 			pot=parseInt(pot)+parseInt(panus);
-			document.getElementById("pot").innerHTML="$"+pot;
+			
+			muudaCall();
+			
 			mangija_raha=parseInt(mangija_raha)-parseInt(panus);
 			document.getElementById("stack").innerHTML="$"+mangija_raha;
 			panus = 0;
@@ -541,19 +543,19 @@ function raise(){
 	to_pot();
 }
 
-function call(){
-	if (suurim_panus - panus < mangija_raha){
-		panus = suurim_panus - panus;
-		to_pot();
-	}
-	else {
-		var puudu = document.getElementById("example1");
-		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
-		puudu.appendChild(document.createElement('br'));
-		puudu.appendChild(document.createTextNode("command line# "));
-	}
-	
-}
+//function call(){
+//	if (suurim_panus - panus < mangija_raha){
+//		panus = suurim_panus - panus;
+//		to_pot();
+//	}
+//	else {
+//		var puudu = document.getElementById("example1");
+//		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
+//		puudu.appendChild(document.createElement('br'));
+//		puudu.appendChild(document.createTextNode("command line# "));
+//	}
+//	
+//}
 
 function ok(){
 
@@ -605,90 +607,81 @@ function end(){
 }
 
 
-function uuendaInfo() {
+function call(){
+	
+	if (suurim_panus - panus < mangija_raha){
+		panus = suurim_panus - panus;
+		to_pot();
+	}
+	else {
+		var puudu = document.getElementById("example1");
+		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
+		puudu.appendChild(document.createElement('br'));
+		puudu.appendChild(document.createTextNode("command line# "));
+	}
+	
+}
+
+function get_Suurim_panus() {
     var req = new XMLHttpRequest();
-    // kuna brauserid niikuinii nõuavad, et url, mille poole pöördutakse 
-    // on samas domeenis, kui see lehekülg, mis päringu teeb,
-    // siis kasutatakse tavaliselt suhteline url
-    var url = "main?action=muuda"; // oletame, et selle url-i taga on mingit servlet
-    
+    var url = "main?action=database_getSuurim_panus"; 
     req.open("GET", url); 
- 
-    // kõigepealt anna teada, mida teha, kui request'i seisund muutub
     req.onreadystatechange = function() { 
-         // kui request jõudis lõpule ja vigu ei olnud
         if (req.readyState === 4 && req.status === 200) {
-        // kontrollin, et saadeti tõepoolest tekst
         if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             document.getElementById("info").textContent = req.responseText;
-             document.getElementById("pot").innerHTML="10000";
-        }
-        else {
-            alert("vastus polnud tekst");
+             suurim_panus = req.responseText;             
         }
     }
  };
- 
- // ... ja alles siis saada request teele
  req.send(null);    
 }
 
-function uuendaInfo2() {
+function getMangija_raha() {
     var req = new XMLHttpRequest();
-    var url = "main?action=uuenda"; 
+    var url = "main?action=database_getMangija_raha"; 
     req.open("GET", url); 
     req.onreadystatechange = function() { 
         if (req.readyState === 4 && req.status === 200) {
         if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             document.getElementById("info2").textContent = req.responseText;
-             document.getElementById("pot").innerHTML= ""+req.responseText;
+        	mangija_raha = req.responseText;             
         }
     }
  };
- 
- 
- // ... ja alles siis saada request teele
  req.send(null);    
 }
 
-
-
-
-function uuendaInfo3() {
+function getPanus() {
     var req = new XMLHttpRequest();
-    var url = "main?action=sega"; 
+    var url = "main?action=database_getPanus"; 
     req.open("GET", url); 
     req.onreadystatechange = function() { 
         if (req.readyState === 4 && req.status === 200) {
         if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             document.getElementById("info2").textContent = req.responseText;
-             document.getElementById("pot").innerHTML= "midagi";
+             panus = req.responseText;             
         }
     }
  };
- 
- 
- // ... ja alles siis saada request teele
  req.send(null);    
 }
 
 
-function uuendaInfo4() {
+
+
+
+
+function setMangija_raha()  {
     var req = new XMLHttpRequest();
-    var url = "main?action=bet"; 
-    req.open("GET", url); 
+    var url = "main?action=database_setMangija_raha&raha=6000&raha2=7000"; 
+    req.open("POST", url); 
     req.onreadystatechange = function() { 
         if (req.readyState === 4 && req.status === 200) {
         if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             document.getElementById("info4").textContent = req.responseText;
-             document.getElementById("pot").innerHTML= "funkab";
+             suurim_panus = req.responseText;             
         }
     }
  };
- 
- 
- // ... ja alles siis saada request teele
- req.send(null);    
+ req.send(null);
+// req.send("raha=6000&raha2=7000");
 }
 
 
