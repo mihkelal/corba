@@ -690,3 +690,22 @@ function uuendaInfo4() {
  // ... ja alles siis saada request teele
  req.send(null);    
 }
+
+
+function uuendaInfo5() {
+    var req = new XMLHttpRequest();
+    var url = "main?action=rename"; 
+    req.open("GET", url); 
+    req.onreadystatechange = function() { 
+        if (req.readyState === 4 && req.status === 200) {
+        if (req.getResponseHeader("Content-Type").match(/^text/)) {
+             document.getElementById("info4").textContent = req.responseText;
+             document.getElementById("pot").innerHTML= "rename";
+        }
+    }
+ };
+ 
+ 
+ // ... ja alles siis saada request teele
+ req.send(null);    
+}
