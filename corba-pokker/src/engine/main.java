@@ -32,6 +32,10 @@ public class main extends HttpServlet {
 			out.println(Betting.getPot());
 		}
 		
+		if (action != null && action.equals("rename")) {
+			out.println(RenameCards.list3);
+		}
+		
 		if (action != null && action.equals("database_getPot")) {
 			out.println(database.getPot());
 		}
