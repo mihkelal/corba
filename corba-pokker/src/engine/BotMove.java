@@ -15,37 +15,35 @@ public class BotMove extends main {
 		database.setNra(database.getNr() + 1);
 		/////////////////////////
 		
-		if (diilercount == nr)
-			fn_command("Player" + nra + " is dealer");
-		else {
-			if (bot_out[nr] == 1) {
+		if (database.diilercount != nr) {
+			if (database.bot_out[nr] == 1) {
 			} else {
-				if ((diilercount == nr - 1) || (nr == 0 && diilercount == 9)) {
-					if (round < 2 && ring < 2) {
-						dorandom = 0;
-						if (SB < bot_raha[nr] - 1) {
-							randomnumber = SB;
-							if (suurim_panus < randomnumber)
-								suurim_panus = randomnumber;
+				if ((database.diilercount == nr - 1) || (nr == 0 && database.diilercount == 9)) {
+					if (database.round < 2 && database.ring < 2) {
+						database.dorandom = 0;
+						if (database.SB < database.bot_raha[nr] - 1) {
+							database.randomnumber = database.SB;
+							if (database.suurim_panus < database.randomnumber)
+								database.suurim_panus = database.randomnumber;
 						} else
 							fold(nr);
 					}
 				}
-				if ((diilercount) == nr - 2 || (nr == 0 && diilercount == 8)
-						|| (nr == 1 && diilercount == 9)) {
-					if (round < 2 && ring < 2) {
-						dorandom = 0;
-						if (BB < bot_raha[nr] - 1) {
-							randomnumber = BB;
-							if (suurim_panus < randomnumber)
-								suurim_panus = randomnumber;
+				if ((database.diilercount) == nr - 2 || (nr == 0 && database.diilercount == 8)
+						|| (nr == 1 && database.diilercount == 9)) {
+					if (database.round < 2 && database.ring < 2) {
+						database.dorandom = 0;
+						if (database.BB < database.bot_raha[nr] - 1) {
+							database.randomnumber = database.BB;
+							if (database.suurim_panus < database.randomnumber)
+								database.suurim_panus = database.randomnumber;
 						} else {
 							fold(nr);
 						}
 					}
 				}
 
-				if (dorandom == 1) {
+				if (database.dorandom == 1) {
 					Random generator = new Random();
 					int randomn = generator.nextInt(2) + 1;
 					switch (randomn) {
@@ -53,44 +51,45 @@ public class BotMove extends main {
 						fold(nr);
 						break;
 					case 1:
-						randomnumber = (2 * BB) - bot_bet[nr];
-						if (ring == 2)
-							randomnumber = (BB) - bot_bet[nr];
-						if (suurim_panus > randomnumber)
-							randomnumber = (suurim_panus) - bot_bet[nr];
-						if (suurim_panus < randomnumber)
-							suurim_panus = randomnumber;
+						database.randomnumber = (2 * database.BB) - database.bot_bet[nr];
+						if (database.ring == 2) {
+							database.randomnumber = (database.BB) - database.bot_bet[nr];
+						} else if (database.suurim_panus > database.randomnumber) {
+							database.randomnumber = (database.suurim_panus) - database.bot_bet[nr];
+						} else if (database.suurim_panus < database.randomnumber) {
+							database.suurim_panus = database.randomnumber;
+						} else {}
 						break;
 					case 2:
-						if (ring <= 2) {
-							if (suurim_panus < 4 * BB) {
-								randomnumber = (suurim_panus + BB)
-										- bot_bet[nr];
-								suurim_panus += BB;
+						if (database.ring <= 2) {
+							if (database.suurim_panus < 4 * database.BB) {
+								database.randomnumber = (database.suurim_panus + database.BB)
+										- database.bot_bet[nr];
+								database.suurim_panus += database.BB;
 							} else
-								randomnumber = (suurim_panus) - bot_bet[nr];
+								database.randomnumber = (database.suurim_panus) - database.bot_bet[nr];
 						} else {
-							if (suurim_panus < 8 * BB) {
-								if (ring < 3) {
-									randomnumber = (suurim_panus + BB)
-											- bot_bet[nr];
-									suurim_panus += BB;
+							if (database.suurim_panus < 8 * database.BB) {
+								if (database.ring < 3) {
+									database.randomnumber = (database.suurim_panus + database.BB)
+											- database.bot_bet[nr];
+									database.suurim_panus += database.BB;
 								} else
-									randomnumber = (suurim_panus + 2 * BB)
-											- bot_bet[nr];
-								suurim_panus += 2 * BB;
+									database.randomnumber = (database.suurim_panus + 2 * database.BB)
+											- database.bot_bet[nr];
+								database.suurim_panus += 2 * database.BB;
 							} else
-								randomnumber = (suurim_panus) - bot_bet[nr];
+								database.randomnumber = (database.suurim_panus) - database.bot_bet[nr];
 						}
 						break;
 					default:
 					}
 				}
 
-				if (randomnumber <= bot_raha[nr] && bot_out[nr] == 0)
-					bett(nr, nra, randomnumber);
+				if (database.randomnumber <= database.bot_raha[nr] && database.bot_out[nr] == 0)
+					bett(nr, database.nra, database.randomnumber); // siia on vaja bett funktsioon teha kuidagi
 				else {
-					if (bot_out[nr] == 0)
+					if (database.bot_out[nr] == 0)
 						fold(nr);
 				}
 			}
@@ -98,8 +97,7 @@ public class BotMove extends main {
 	}
 
 	static void fold(int nr) {
-		bot_out[nr] = 1;
-		fn_command("Player" + (nr + 1) + " folds");
+		database.bot_out[nr] = 1;
 	}
 
 	static ArrayList<String> list = new ArrayList<String>();
