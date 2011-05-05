@@ -1,14 +1,31 @@
 package engine;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class BotMove extends main {
-
-
-	static void Botkaik(int nr) {
-
+	static void Botkaigud(int nr) {
 		
+		for (int i=0;i<=8;i++){
+			if (database.bot_out[i] == 0){
+				Botkaik(i);
+			}
+		}
+		database.round++;
+			
+		for (int i=0;i<=8;i++){
+								//if (i==1) alert(bot_bet[i]);
+			if (database.bot_bet[i] < database.suurim_panus){
+				if (database.bot_out[i] == 0){
+					Botkaik(i);
+				}
+			}
+		}
+		database.round=1;
+		
+		//database.bot_bet = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+	;
+	}
+	static void Botkaik(int nr) {
 		//sellises stiilis kõik ülejäänud ToDo
 		database.setDorandom(1);
 		database.setRandomnumber(1);
@@ -100,6 +117,19 @@ public class BotMove extends main {
 		database.bot_out[nr] = 1;
 	}
 
-	static ArrayList<String> list = new ArrayList<String>();
+	static void bett(int nr, int nra, int randomnumber){
+		//POT
+		database.pot = database.pot + randomnumber;
+		//document.getElementById("pot").innerHTML="$" + pot;
+		
+		//BOT_RAHA
+		database.bot_raha[nr] = database.bot_raha[nr] - randomnumber;
+		//document.getElementById("stack" + nra).innerHTML="$" + bot_raha[nr];
+		
+		//CMD LINE
+		//fn_command("Player" + nra + " betted $" + randomnumber);
+		database.bot_bet[nr] = randomnumber;
+	}
+	
 
 }

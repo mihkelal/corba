@@ -23,11 +23,9 @@ public class main extends HttpServlet {
 
 		if (action != null && action.equals("muuda")) {
 			
-			
-			
 		}
+		
 		if (action != null && action.equals("uuenda")) {
-			
 			out.println(shuffle.segamine());
 			
 		}
