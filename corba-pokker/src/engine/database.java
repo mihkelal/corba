@@ -10,6 +10,8 @@ public class database extends main{
 	static int[] bot_raha = { 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000 };
 	static int[] bot_out = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	static int[] bot_bet = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	static int[] list3 = {};
+	static int[] list4 = {};
 	static int ring = 0;
 	static int round = 1;
 	static int dorandom = 1;
