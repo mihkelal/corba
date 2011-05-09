@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BotMove extends main {
 	static void Botkaigud(int nr) {
-		
+
 		for (int i=0;i<=8;i++){
 			if (database.bot_out[i] == 0){
 				Botkaik(i);
@@ -26,12 +26,12 @@ public class BotMove extends main {
 	;
 	}
 	static void Botkaik(int nr) {
-		//sellises stiilis kõik ülejäänud ToDo
+		
+
 		database.setDorandom(1);
 		database.setRandomnumber(1);
 		database.setNra(database.getNr() + 1);
-		/////////////////////////
-		
+				
 		if (database.diilercount != nr) {
 			if (database.bot_out[nr] == 1) {
 			} else {
@@ -103,8 +103,10 @@ public class BotMove extends main {
 					}
 				}
 
-				if (database.randomnumber <= database.bot_raha[nr] && database.bot_out[nr] == 0)
-					bett(nr, database.nra, database.randomnumber); // siia on vaja bett funktsioon teha kuidagi
+				if (database.randomnumber <= database.bot_raha[nr] && database.bot_out[nr] == 0){
+					//bett(nr, database.nra, database.randomnumber); // siia on vaja bett funktsioon teha kuidagi
+				}
+					
 				else {
 					if (database.bot_out[nr] == 0)
 						fold(nr);

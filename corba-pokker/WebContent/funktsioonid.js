@@ -29,81 +29,39 @@ var komb10 = [];
 var kombmax = [];
 
 var Dealer = 0;
+
+var new1 = 0;
+var new2 = 0;
+var new3 = 0;
+var new4 = 0;
+
+var str1;
+var str2;
+var str3;
+var str4;
+
 //BUGGED IF DECLARED BELOW THIS LINE
 
 
 function alusta_mangu() {
 	diilercount++;
-	if (parseInt(diilercount) == 10){
-		diilercount -=10;
-	}
+
+	new1 = diilercount+1%10-10;
+	new2 = diilercount+2%10-10;
+	new3 = diilercount+3%10-10;
+	new4 = diilercount+10%10-10;
+
+	str1 = "role"+new1.toString();
+	str2 = "role"+new2.toString();
+	str3 = "role"+new3.toString();
+	str4 = "role"+new4.toString();
+
 	
-	switch (parseInt(diilercount))
-	{
-	case 0:
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10"></div>;
-	  break;
-	case 1:
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1"></div>;
-	  break;
-	case 2:
-		document.getElementById("role3").innerHTML=<div id = "role3" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2"></div>;
-	  break;
-	case 3:
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role3").innerHTML=<div id = "role3"></div>;
-	  break;
-	case 4:
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role4").innerHTML=<div id = "role4" class= "roll"></div>;
-	  break;
-	case 5:
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role5").innerHTML=<div id = "role5" class= "roll"></div>;
-	  break;
-	case 6:
-		document.getElementById("role7").innerHTML=<div id = "role7" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role6").innerHTML=<div id = "role6" class= "roll"></div>;
-	  break;
-	case 7:
-		document.getElementById("role8").innerHTML=<div id = "role8" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role7").innerHTML=<div id = "role7"></div>;
-	  break;
-	case 8:
-		document.getElementById("role9").innerHTML=<div id = "role9" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role8").innerHTML=<div id = "role8"></div>;
-	  break;
-	case 9:
-		document.getElementById("role10").innerHTML=<div id = "role10" class= "roll"><img src="./images/d.png" width="30" height="30"/></div>;
-		document.getElementById("role1").innerHTML=<div id = "role1" class= "roll"><img src="./images/sb.png" width="30" height="30"/></div>;
-		document.getElementById("role2").innerHTML=<div id = "role2" class= "roll"><img src="./images/bb.png" width="30" height="30"/></div>;
-		document.getElementById("role9").innerHTML=<div id = "role9"></div>;
-	  break;
-	default:
-		document.write("error");
-	}
-	
+	document.getElementById(str1).innerHTML="<div id = '"+str1+"' class= 'roll'><img src='./images/d.png' width='30' height='30'/></div>";
+	document.getElementById(str2).innerHTML="<div id = '"+str2+"' class= 'roll'><img src='./images/sb.png' width='30' height='30'/></div>";
+	document.getElementById(str3).innerHTML="<div id = '"+str3+"' class= 'roll'><img src='./images/bb.png' width='30' height='30'/></div>";
+	document.getElementById(str4).innerHTML="<div id = '"+str4+"'></div>";
+
 	var alusta = document.getElementById("example1");
 	alusta.appendChild(document.createTextNode("game on"));
 	alusta.appendChild(document.createElement('br'));
@@ -200,83 +158,23 @@ function segamine(){
 }
 
 function mis_kaart_kellele(){
-	var ajutine22;
+	var ajutine22 = 0;
+	var ajutine33;
+	var ajutine44;
+	var str;
 	var mangija = [];
-	for (ajutine22 = 0; ajutine22 < 20; ajutine22++){
-		switch (ajutine22)
-		{
-		case 0:
-			document.getElementById("player11").innerHTML="<div id='player11'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 1:
-			document.getElementById("player12").innerHTML="<div id='player12'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 2:
-			document.getElementById("player21").innerHTML="<div id='player21'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 3:
-			document.getElementById("player22").innerHTML="<div id='player22'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 4:
-			document.getElementById("player31").innerHTML="<div id='player31'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 5:
-			document.getElementById("player32").innerHTML="<div id='player32'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 6:
-			document.getElementById("player41").innerHTML="<div id='player41'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 7:
-			document.getElementById("player42").innerHTML="<div id='player42'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 8:
-			document.getElementById("player51").innerHTML="<div id='player51'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 9:
-			document.getElementById("player52").innerHTML="<div id='player52'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 10:
-			document.getElementById("player61").innerHTML="<div id='player61'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 11:
-			document.getElementById("player62").innerHTML="<div id='player62'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 12:
-			document.getElementById("player71").innerHTML="<div id='player71'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 13:
-			document.getElementById("player72").innerHTML="<div id='player72'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 14:
-			document.getElementById("player81").innerHTML="<div id='player81'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 15:
-			document.getElementById("player82").innerHTML="<div id='player82'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 16:
-			document.getElementById("player91").innerHTML="<div id='player91'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 17:
-			document.getElementById("player92").innerHTML="<div id='player92'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 18:
-			document.getElementById("player101").innerHTML="<div id='player101'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		case 19:
-			document.getElementById("player102").innerHTML="<div id='player102'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
-		  break;
-		default:
-			document.write("error");
-		}
-	}
+	
+		for (ajutine33 = 1; ajutine33 < 11; ajutine33++){
+			for (ajutine44 = 1; ajutine44 < 3; ajutine44++){
+				str = "player"+ajutine33+ajutine44;
+				ajutine22++;
+				document.getElementById(str).innerHTML="<div id='"+str+"'><img src='./cards/"+ list3[ajutine22] +".png' width='50' height='75'/></div>";
 
-	
-	
-	rename();
-	
-	
-	compare_gaga();
-	
+			}
+		}
+
+	rename();	
+	compare_gaga();	
 	compare();
 	
 	var kaartide_kuvamine = document.getElementById("example1");
@@ -543,51 +441,33 @@ function raise(){
 	to_pot();
 }
 
-//function call(){
-//	if (suurim_panus - panus < mangija_raha){
-//		panus = suurim_panus - panus;
-//		to_pot();
-//	}
-//	else {
-//		var puudu = document.getElementById("example1");
-//		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
-//		puudu.appendChild(document.createElement('br'));
-//		puudu.appendChild(document.createTextNode("command line# "));
-//	}
-//	
-//}
+function call(){
+	if (suurim_panus - panus < mangija_raha){
+		panus = suurim_panus - panus;
+		to_pot();
+	}
+	else {
+		var puudu = document.getElementById("example1");
+		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
+		puudu.appendChild(document.createElement('br'));
+		puudu.appendChild(document.createTextNode("command line# "));
+	}
+	
+}
 
 function ok(){
-
-	document.getElementById("player11").innerHTML=<div id="player11"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player12").innerHTML=<div id="player12"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player21").innerHTML=<div id="player21"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player22").innerHTML=<div id="player22"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player31").innerHTML=<div id="player31"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player32").innerHTML=<div id="player32"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player41").innerHTML=<div id="player41"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player42").innerHTML=<div id="player42"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player51").innerHTML=<div id="player51"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player52").innerHTML=<div id="player52"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player61").innerHTML=<div id="player61"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player62").innerHTML=<div id="player62"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player71").innerHTML=<div id="player71"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player72").innerHTML=<div id="player72"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player81").innerHTML=<div id="player81"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player82").innerHTML=<div id="player82"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player91").innerHTML=<div id="player91"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player92").innerHTML=<div id="player92"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player101").innerHTML=<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>;
-	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
+	for (ajutine22 = 1; ajutine22 < 11; ajutine22++){
+		for (ajutine33 = 1; ajutine33 < 3; ajutine33++){
+			str = "player"+ajutine22+ajutine33;
+			document.getElementById(str).innerHTML="<div id='"+str+"'><img src='./images/card back.png' width='50' height='75'/></div>";
+			
+		}
+	}
 
 	document.getElementById("acard1").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-
 	document.getElementById("acard2").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-
 	document.getElementById("acard3").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-
 	document.getElementById("acard4").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-
 	document.getElementById("acard5").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
 	ok_out();
 
@@ -604,101 +484,4 @@ function end(){
 	document.getElementById("player101").innerHTML=<div id="player101"><img src="./images/card back.png" width="50" height="75"/></div>;
 	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
 	end_pressed();
-}
-
-
-function call(){
-	
-	if (suurim_panus - panus < mangija_raha){
-		panus = suurim_panus - panus;
-		to_pot();
-	}
-	else {
-		var puudu = document.getElementById("example1");
-		puudu.appendChild(document.createTextNode("pole piisavalt raha"));
-		puudu.appendChild(document.createElement('br'));
-		puudu.appendChild(document.createTextNode("command line# "));
-	}
-	
-}
-
-function get_Suurim_panus() {
-    var req = new XMLHttpRequest();
-    var url = "main?action=database_getSuurim_panus"; 
-    req.open("GET", url); 
-    req.onreadystatechange = function() { 
-        if (req.readyState === 4 && req.status === 200) {
-        if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             suurim_panus = req.responseText;             
-        }
-    }
- };
- req.send(null);    
-}
-
-function getMangija_raha() {
-    var req = new XMLHttpRequest();
-    var url = "main?action=database_getMangija_raha"; 
-    req.open("GET", url); 
-    req.onreadystatechange = function() { 
-        if (req.readyState === 4 && req.status === 200) {
-        if (req.getResponseHeader("Content-Type").match(/^text/)) {
-        	mangija_raha = req.responseText;             
-        }
-    }
- };
- req.send(null);    
-}
-
-function getPanus() {
-    var req = new XMLHttpRequest();
-    var url = "main?action=database_getPanus"; 
-    req.open("GET", url); 
-    req.onreadystatechange = function() { 
-        if (req.readyState === 4 && req.status === 200) {
-        if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             panus = req.responseText;             
-        }
-    }
- };
- req.send(null);    
-}
-
-
-
-
-
-
-function setMangija_raha()  {
-    var req = new XMLHttpRequest();
-    var url = "main?action=database_setMangija_raha&raha=6000&raha2=7000"; 
-    req.open("POST", url); 
-    req.onreadystatechange = function() { 
-        if (req.readyState === 4 && req.status === 200) {
-        if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             suurim_panus = req.responseText;             
-        }
-    }
- };
- req.send(null);
-// req.send("raha=6000&raha2=7000");
-}
-
-
-function uuendaInfo5() {
-    var req = new XMLHttpRequest();
-    var url = "main?action=rename"; 
-    req.open("GET", url); 
-    req.onreadystatechange = function() { 
-        if (req.readyState === 4 && req.status === 200) {
-        if (req.getResponseHeader("Content-Type").match(/^text/)) {
-             document.getElementById("info4").textContent = req.responseText;
-             document.getElementById("pot").innerHTML= "rename";
-        }
-    }
- };
- 
- 
- // ... ja alles siis saada request teele
- req.send(null);    
 }

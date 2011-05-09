@@ -1,6 +1,6 @@
 package engine;
 
-public class database extends main{
+public class database{
 
 	static int panus = 0;
 	static int pot = 0;
@@ -120,6 +120,5 @@ public class database extends main{
 	public static void setNra(int nra) {
 		database.nra = nra;
 	}
-
 
 }

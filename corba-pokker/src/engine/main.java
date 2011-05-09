@@ -19,7 +19,7 @@ public class main extends HttpServlet {
 		resp.setContentType("text/html");
 		String action = req.getParameter("action");
 		if (action != null && action.equals("database_setMangija_raha")) {
-			System.out.println("RAHA="+req.getAttribute("raha2"));
+			System.out.println("RAHA="+req.getAttribute("raha"));
 			teebmidagi(req);
 			database.setMangija_raha(Integer.parseInt(req.getParameter("raha")));
 		}
@@ -47,7 +47,10 @@ public class main extends HttpServlet {
 		}
 		
 		if (action != null && action.equals("uuenda")) {
-			out.println(shuffle.segamine());			
+			out.println(shuffle.segamine());
+			
+			out.println(boost(action));
+			
 		}		
 		if (action != null && action.equals("sega")) {
 			for (int i = 0; i < 52; i++){
@@ -98,6 +101,19 @@ public class main extends HttpServlet {
 		if (action != null && action.equals("database_getMangija_raha")) {
 			out.println(database.getMangija_raha());
 		}
+		
+		
+
 
 	} 	
+
+	
+	public int boost(String action){
+		System.out.println(action);
+		System.out.println(action);
+		System.out.println(action);
+		System.out.println("midagiiiii");
+		
+		return 0;
+	}
 }
