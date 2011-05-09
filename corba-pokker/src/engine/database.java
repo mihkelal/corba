@@ -2,9 +2,9 @@ package engine;
 
 public class database{
 
-	static int panus = 0;
-	static int pot = 0;
-	static int suurim_panus = 0;
+	static int panus = 10;
+	static int pot = 20;
+	static int suurim_panus = 30;
 	static int diilercount = 9;
 
 	static int[] bot_raha = { 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000 };
@@ -22,7 +22,7 @@ public class database{
 	static int randomnumber = 0;
 	static int nra;
 	
-	static int mangija_raha = 5000;
+	static int mangija_raha = 6000;
 	
 	public static int getMangija_raha() {
 		return mangija_raha;
