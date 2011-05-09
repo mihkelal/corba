@@ -24,6 +24,10 @@ public class main extends HttpServlet {
 			database.setMangija_raha(Integer.parseInt(req.getParameter("raha")));
 		}
 		
+		if (action != null && action.equals("database_setPanus")) {
+			database.setPanus(Integer.parseInt(req.getParameter("value")));
+		}
+		
 	}
 	
 	public void teebmidagi(HttpServletRequest req){

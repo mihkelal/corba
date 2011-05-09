@@ -442,8 +442,17 @@ function raise(){
 }
 
 function call(){
-	if (suurim_panus - panus < mangija_raha){
-		panus = suurim_panus - panus;
+	alert("panus ennem "+get_database("database_getPanus"));
+	
+	alert(get_database("database_getSuurim_panus"));
+	alert(get_database("database_getPanus"));
+	alert(get_database("database_getMangija_raha"));
+	
+	
+	if (get_database("database_getSuurim_panus") - get_database("database_getPanus") < get_database("database_getMangija_raha")){
+		set_database("database_setPanus","value"+get_database("database_getSuurim_panus")+get_database("database_getPanus"));
+		alert("suurim "+get_database("database_getSuurim_panus"));
+		alert("panus "+get_database("database_getPanus"));
 		to_pot();
 	}
 	else {
