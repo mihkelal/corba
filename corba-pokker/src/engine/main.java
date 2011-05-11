@@ -62,7 +62,7 @@ public class main extends HttpServlet {
 			}			
 		}		
 		if (action != null && action.equals("bet")) {
-			out.println(Betting.getPot());
+			out.println(database.getPot());
 		}
 		
 		if (action != null && action.equals("rename")) {
