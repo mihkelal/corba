@@ -104,7 +104,7 @@ public class BotMove extends main {
 				}
 
 				if (database.randomnumber <= database.bot_raha[nr] && database.bot_out[nr] == 0){
-					//bett(nr, database.nra, database.randomnumber); // siia on vaja bett funktsioon teha kuidagi
+					bett(nr, database.nra, database.randomnumber);
 				}
 					
 				else {
@@ -121,11 +121,11 @@ public class BotMove extends main {
 
 	static void bett(int nr, int nra, int randomnumber){
 		//POT
-		database.pot = database.pot + randomnumber;
+		database.setPot(database.getPot() + randomnumber);
 		//document.getElementById("pot").innerHTML="$" + pot;
 		
 		//BOT_RAHA
-		database.bot_raha[nr] = database.bot_raha[nr] - randomnumber;
+		database.setOneBot_raha(nr, database.getOneBot_raha(nr) - randomnumber);
 		//document.getElementById("stack" + nra).innerHTML="$" + bot_raha[nr];
 		
 		//CMD LINE
