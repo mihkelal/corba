@@ -57,8 +57,14 @@ public class database{
 	public static int[] getBot_raha() {
 		return bot_raha;
 	}
+	public static int getOneBot_raha(int index) {
+		return bot_raha[index];
+	}
 	public static void setBot_raha(int[] bot_raha) {
 		database.bot_raha = bot_raha;
+	}
+	public static void setOneBot_raha(int index, int amount){
+		database.bot_raha[index] = amount;
 	}
 	public static int[] getBot_out() {
 		return bot_out;
