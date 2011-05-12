@@ -55,7 +55,6 @@ function alusta_mangu() {
 	str2 = "role"+new2.toString();
 	str3 = "role"+new3.toString();
 	str4 = "role"+new4.toString();
-
 	
 	document.getElementById(str1).innerHTML="<div id = '"+str1+"' class= 'roll'><img src='./images/d.png' width='30' height='30'/></div>";
 	document.getElementById(str2).innerHTML="<div id = '"+str2+"' class= 'roll'><img src='./images/sb.png' width='30' height='30'/></div>";
@@ -68,69 +67,10 @@ function alusta_mangu() {
 	alusta.appendChild(document.createTextNode("command line# "));
 }
 
-function rename() {
-	for (i=0;i<52;i++){
-		if (list3[i] == "c2") list4[i] = [2, 'c'];
-		else if (list3[i] == "c3") list4[i] = [3, 'c'];
-		else if (list3[i] == "c4") list4[i] = [4, 'c'];
-		else if (list3[i] == "c5") list4[i] = [5, 'c'];
-		else if (list3[i] == "c6") list4[i] = [6, 'c'];
-		else if (list3[i] == "c7") list4[i] = [7, 'c'];
-		else if (list3[i] == "c8") list4[i] = [8, 'c'];
-		else if (list3[i] == "c9") list4[i] = [9, 'c'];
-		else if (list3[i] == "c10") list4[i] = ['T', 'c'];
-		else if (list3[i] == "cj") list4[i] = ['J', 'c'];
-		else if (list3[i] == "cq") list4[i] = ['Q', 'c'];
-		else if (list3[i] == "ck") list4[i] = ['K', 'c'];
-		else if (list3[i] == "ca") list4[i] = ['A', 'c'];
-		
-		else if (list3[i] == "d2") list4[i] = [2, 'd'];
-		else if (list3[i] == "d3") list4[i] = [3, 'd'];
-		else if (list3[i] == "d4") list4[i] = [4, 'd'];
-		else if (list3[i] == "d5") list4[i] = [5, 'd'];
-		else if (list3[i] == "d6") list4[i] = [6, 'd'];
-		else if (list3[i] == "d7") list4[i] = [7, 'd'];
-		else if (list3[i] == "d8") list4[i] = [8, 'd'];
-		else if (list3[i] == "d9") list4[i] = [9, 'd'];
-		else if (list3[i] == "d10") list4[i] = ['T', 'd'];
-		else if (list3[i] == "dj") list4[i] = ['J', 'd'];
-		else if (list3[i] == "dq") list4[i] = ['Q', 'd'];
-		else if (list3[i] == "dk") list4[i] = ['K', 'd'];
-		else if (list3[i] == "da") list4[i] = ['A', 'd'];
-		
-		else if (list3[i] == "h2") list4[i] = [2, 'h'];
-		else if (list3[i] == "h3") list4[i] = [3, 'h'];
-		else if (list3[i] == "h4") list4[i] = [4, 'h'];
-		else if (list3[i] == "h5") list4[i] = [5, 'h'];
-		else if (list3[i] == "h6") list4[i] = [6, 'h'];
-		else if (list3[i] == "h7") list4[i] = [7, 'h'];
-		else if (list3[i] == "h8") list4[i] = [8, 'h'];
-		else if (list3[i] == "h9") list4[i] = [9, 'h'];
-		else if (list3[i] == "h10") list4[i] = ['T', 'h'];
-		else if (list3[i] == "hj") list4[i] = ['J', 'h'];
-		else if (list3[i] == "hq") list4[i] = ['Q', 'h'];
-		else if (list3[i] == "hk") list4[i] = ['K', 'h'];
-		else if (list3[i] == "ha") list4[i] = ['A', 'h'];
-		
-		else if (list3[i] == "s2") list4[i] = [2, 's'];
-		else if (list3[i] == "s3") list4[i] = [3, 's'];
-		else if (list3[i] == "s4") list4[i] = [4, 's'];
-		else if (list3[i] == "s5") list4[i] = [5, 's'];
-		else if (list3[i] == "s6") list4[i] = [6, 's'];
-		else if (list3[i] == "s7") list4[i] = [7, 's'];
-		else if (list3[i] == "s8") list4[i] = [8, 's'];
-		else if (list3[i] == "s9") list4[i] = [9, 's'];
-		else if (list3[i] == "s10") list4[i] = ['T', 's'];
-		else if (list3[i] == "sj") list4[i] = ['J', 's'];
-		else if (list3[i] == "sq") list4[i] = ['Q', 's'];
-		else if (list3[i] == "sk") list4[i] = ['K', 's'];
-		else if (list3[i] == "sa") list4[i] = ['A', 's'];
-	}
-}
+
 
 function segamine(){
 
-	//list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52];
 	list1 = ["c2","c3","c4","c5","c6","c7","c8","c9","c10","ca","cj","ck","cq",
 	         "d2","d3","d4","d5","d6","d7","d8","d9","d10","da","dj","dk","dq",
 	         "h2","h3","h4","h5","h6","h7","h8","h9","h10","ha","hj","hk","hq",
@@ -187,17 +127,12 @@ function fsisend(){
 	document.write(document.text.Bet);
 }
 
-function fn_bet_how_much(elem){
-	panus=parseInt(elem.value);
-	document.getElementById("bet").innerHTML="$"+panus;
-}
-
 function to_pot(){
 	if (ring !=4) {
 		if (parseInt(panus) <= parseInt(mangija_raha)){
 			pot=parseInt(pot)+parseInt(panus);
-			
-			muudaCall();
+
+			document.getElementById("pot").innerHTML="$"+get_database("database_getPot");
 			
 			mangija_raha=parseInt(mangija_raha)-parseInt(panus);
 			document.getElementById("stack").innerHTML="$"+mangija_raha;
@@ -442,13 +377,7 @@ function raise(){
 }
 
 function call(){
-	alert("panus ennem "+get_database("database_getPanus"));
-	
-	alert(get_database("database_getSuurim_panus"));
-	alert(get_database("database_getPanus"));
-	alert(get_database("database_getMangija_raha"));
-	
-	
+
 	if (get_database("database_getSuurim_panus") - get_database("database_getPanus") < get_database("database_getMangija_raha")){
 		set_database("database_setPanus","value"+get_database("database_getSuurim_panus")+get_database("database_getPanus"));
 		alert("suurim "+get_database("database_getSuurim_panus"));
@@ -469,15 +398,13 @@ function ok(){
 		for (ajutine33 = 1; ajutine33 < 3; ajutine33++){
 			str = "player"+ajutine22+ajutine33;
 			document.getElementById(str).innerHTML="<div id='"+str+"'><img src='./images/card back.png' width='50' height='75'/></div>";
-			
 		}
 	}
-
-	document.getElementById("acard1").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-	document.getElementById("acard2").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-	document.getElementById("acard3").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-	document.getElementById("acard4").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
-	document.getElementById("acard5").innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+	for (ajutine = 1; ajutine < 6; ajutine++){
+		str = "acard"+ajutine;
+		document.getElementById(str).innerHTML=<div><img src="./images/card back small.png" width="34" height="50"/></div>;
+	}
+	
 	ok_out();
 
 	ring = 0;
