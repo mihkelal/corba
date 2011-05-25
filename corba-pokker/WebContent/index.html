@@ -171,8 +171,40 @@
 <input type='button' onclick="set_pack('database_setMangija_raha','raha=6666')" value='button'/>
 		</div>
 	</body>
-		
-	
+
+
+
+<script type="text/javascript">
+window.onload  = function(){
+	getthestuffLocal();
+};
+
+//the next two functions are written the same way as the previous two
+function savethestuffLocal(){
+	var lala = document.getElementById("example1");
+	var thevalue = lala.innerHTML;
+	localStorage.setItem(1, thevalue);
+	getthestuffLocal();
+}
+function getthestuffLocal(){
+	var data;
+	var thediv = document.getElementById("displaylocal");
+	data = localStorage.getItem(1);
+	if (data){
+		thediv.innerHTML = data;
+	}
+}
+</script>
+
+<div id="displaylocal">Seems there is nothing stored in local storage yet</div>
+
+<input type="text" name="" value="" id="second" />
+
+<a href="javascript:savethestuffLocal();">Save it!</a>	
+
+
+
+
 <script type="text/javascript">
 	eelLaadimine();
 

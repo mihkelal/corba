@@ -421,3 +421,5 @@ function end(){
 	document.getElementById("player102").innerHTML=<div id="player102"><img src="./images/card back.png" width="50" height="75"/></div>;
 	end_pressed();
 }
+
+
