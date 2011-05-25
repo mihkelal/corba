@@ -172,27 +172,25 @@
 		</div>
 	</body>
 
-
-
 <script type="text/javascript">
 window.onload  = function(){
-	getthestuffLocal();
+        getthestuffLocal();
 };
 
 //the next two functions are written the same way as the previous two
 function savethestuffLocal(){
-	var lala = document.getElementById("example1");
-	var thevalue = lala.innerHTML;
-	localStorage.setItem(1, thevalue);
-	getthestuffLocal();
+        var lala = document.getElementById("example1");
+        var thevalue = lala.innerHTML;
+        localStorage.setItem(1, thevalue);
+        getthestuffLocal();
 }
 function getthestuffLocal(){
-	var data;
-	var thediv = document.getElementById("displaylocal");
-	data = localStorage.getItem(1);
-	if (data){
-		thediv.innerHTML = data;
-	}
+        var data;
+        var thediv = document.getElementById("displaylocal");
+        data = localStorage.getItem(1);
+        if (data){
+                thediv.innerHTML = data;
+        }
 }
 </script>
 
@@ -200,10 +198,7 @@ function getthestuffLocal(){
 
 <input type="text" name="" value="" id="second" />
 
-<a href="javascript:savethestuffLocal();">Save it!</a>	
-
-
-
+<a href="javascript:savethestuffLocal();">Save it!</a> 
 
 <script type="text/javascript">
 	eelLaadimine();
